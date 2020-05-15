@@ -3,43 +3,34 @@ import Layout from "./insertion";
 import Pizza from "./Pizza";
 
 const content = document.getElementById("Pizza");
-const btn1 = Layout.InsertElement("button", "", "Home", null, "Home Page", content);
-const btn2 = Layout.InsertElement("button", "", "Order", null, "Order", content);
-const btn3 = Layout.InsertElement("button", "", "AboutUs", null, "About us", content);
-const navBar = Layout.InsertElement("nav", "", "", null, "one two three", content);
-const welcome = Layout.InsertElement("h1", "", "weclome", null, "welcome to our website", content);
-const HomePage = Layout.InsertElement("div", "Page", "HomePage", null, "page1", content);
-const OrderPage = Layout.InsertElement("div", "Page", "OrderPage", null, "page2", content);
-const AboutPage = Layout.InsertElement("div", "Page", "AboutPage", null, "page3", content);
+
+const banner = Layout.InsertElement("div", "site-banner banner-shadow", "siteBanner", null, "", content);
+const innerBanner = Layout.InsertElement("div", "site-banner-background bg-red-orange", "siteBannerInner", null, "", banner);
+const welcome = Layout.InsertElement("h1", "site-banner-title bottom-left", "welcome", null, "Bambinos Pizza Place", innerBanner);
+
+//Don't use button tags!
+const navBar = Layout.InsertElement("nav", "sticky-nav bg-red-orange", "topNav", null, "", content);
+const innerNav = Layout.InsertElement("div", "inner-nav match-container", "topInner", null, "", navBar);
+
+const homeBtn = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "Home", null, "Home Page", innerNav);
+const orderBtn = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "Order", null, "Order", innerNav);
+const abtBtn = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "AboutUs", null, "About us", innerNav);
+
+//use show-page and hide page to change visibility
+const HomePage = Layout.InsertElement("div", "Page show-Page content-container", "HomePage", null, "", content);
+const OrderPage = Layout.InsertElement("div", "Page hide-Page content-container", "OrderPage", null, "", content);
+const AboutPage = Layout.InsertElement("div", "Page hide-Page content-container", "AboutPage", null, "", content);
 
 // content.innerHTML = firstSlice;
 
-const Home = document.getElementById("HomePage");
-const Order = document.getElementById("OrderPage");
-const About = document.getElementById("AboutPage");
-
-const HomeBtn = document.getElementById("Home");
-const OrderBtn = document.getElementById("Order");
-const AboutBtn = document.getElementById("AboutUs");
-
-Home.style.display = "block";
-Order.style.display = "none";
-About.style.display = "none";
-
 HomeBtn.addEventListener("click", (evt) => {
-  Home.style.display = "block";
-  Order.style.display = "none";
-  About.style.display = "none";
+
 });
 
 OrderBtn.addEventListener("click", (evt) => {
-  Home.style.display = "none";
-  Order.style.display = "block";
-  About.style.display = "none";
+
 });
 
 AboutBtn.addEventListener("click", (evt) => {
-  Home.style.display = "none";
-  Order.style.display = "none";
-  About.style.display = "Block";
+
 });

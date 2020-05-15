@@ -21,6 +21,7 @@ function InsertElement(tag, classes, id, data, content, insertionPoint) {
 
     var insertString = `<${tag} class="${classes}" ${dataStr} id="${id}">${content}</${tag}>`
     insertionPoint.innerHTML += insertString;
+    return document.getElementById(id);
 }
 
 function InsertElementWithSrc(tag, classes, id, data, content, insertionPoint, src) {
@@ -34,6 +35,7 @@ function InsertElementWithSrc(tag, classes, id, data, content, insertionPoint, s
 
     var insertString = `<${tag} class="${classes}" ${dataStr} src="${src}" id="${id}">${content}</${tag}>`
     insertionPoint.innerHTML += insertString;
+    return document.getElementById(id);
 }
 
 function initPizzas() {
