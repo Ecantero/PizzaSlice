@@ -1,33 +1,43 @@
-import Layout from "./insertion";
-import Pizza from "./Pizza";
 
-// const content = document.getElementById("Pizza");s
-
-export const firstSlice = `
-    <nav>
-        <button id="Home">Home</button>
-        <button id="Order">Order</button>
-        <button id="AboutUs">About Us</button>
-    </nav>
-    <div id="HomePage">
-        <h1>Pizza name goes here</h1>
-        <p>
-            welcome
-        </p>
+export const HomeContent = `
+    <h1>Home</h1>
+    <div id="">
+        possible slideshow??
     </div>
-    <div id="OrderPage">
-        <h1>Order your favorite pizza</h1>
-        <p>
-            order here
-        </p>
+    <div id="preSelected">
+        Order from our five 
     </div>
-    <div id="AboutPage">
-        <h1>Who we are</h1>
-        <p>
-            a pizza place
-        </p>
+    <div id="buildOwn">
+        Build Your Own
     </div>
 `;
 
+export const OrderContent = `
+    <h1>Order</h1>
+    <canvas id="pizzaCanvas"></canvas>
+    <div id="selection"></div>
+`;
 
-// const welcome = Layout.InsertElement("p", "", "weclome", null, "welcome to our website", content);
+export const AboutContent = `
+    <h1>About Us</h1>
+
+`;
+
+export const FiveChoices = `
+    <h1>Choose one of our five choices<h1>
+    <div id="firstChoice">
+        choice number #1
+    </div>
+    <div id="secondChoice">
+        choice number #2
+    </div>
+    <div id="thirdChoice">
+        choice number #3
+    </div>
+    <div id="fourthChoice">
+        choice number #4
+    </div>
+    <div id="fifthChoice">
+        choice number #5
+    </div>
+`;

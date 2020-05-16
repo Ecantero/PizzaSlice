@@ -1,4 +1,4 @@
-import { firstSlice } from "./pizzaLayout";
+import { HomeContent, OrderContent, AboutContent } from "./pizzaLayout";
 import Layout from "./insertion";
 import Pizza from "./Pizza";
 
@@ -12,25 +12,38 @@ const welcome = Layout.InsertElement("h1", "site-banner-title bottom-left", "wel
 const navBar = Layout.InsertElement("nav", "sticky-nav bg-red-orange", "topNav", null, "", content);
 const innerNav = Layout.InsertElement("div", "inner-nav match-container", "topInner", null, "", navBar);
 
-const homeBtn = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "Home", null, "Home Page", innerNav);
-const orderBtn = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "Order", null, "Order", innerNav);
-const abtBtn = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "AboutUs", null, "About us", innerNav);
+const Btn1 = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "Home", null, "Home Page", innerNav);
+const Btn2 = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "Order", null, "Order", innerNav);
+const Btn3 = Layout.InsertElement("div", "button nav-button-light font-size-0 margin-r-1 margin-b-1", "AboutUs", null, "About us", innerNav);
 
 //use show-page and hide page to change visibility
-const HomePage = Layout.InsertElement("div", "Page show-Page content-container", "HomePage", null, "", content);
-const OrderPage = Layout.InsertElement("div", "Page hide-Page content-container", "OrderPage", null, "", content);
-const AboutPage = Layout.InsertElement("div", "Page hide-Page content-container", "AboutPage", null, "", content);
+const Page1 = Layout.InsertElement("div", "Page show-Page content-container", "HomePage", null, HomeContent, content);
+const Page2 = Layout.InsertElement("div", "Page hide-Page content-container", "OrderPage", null, OrderContent, content);
+const Page3 = Layout.InsertElement("div", "Page hide-Page content-container", "AboutPage", null, AboutContent, content);
 
-// content.innerHTML = firstSlice;
+//getting the element to alter them
+var HomePage = document.getElementById("HomePage").className;
+let OrderPage = document.getElementById("OrderPage").className;
+let AboutPage = document.getElementById("AboutPage").className;
+
+const HomeBtn = document.getElementById("Home");
+const OrderBtn = document.getElementById("Order");
+const AboutBtn = document.getElementById("AboutUs");
 
 HomeBtn.addEventListener("click", (evt) => {
-
+  HomePage = "Page show-Page content-container";
+  OrderPage = "Page hide-Page content-container";
+  AboutPage = "Page hide-Page content-container";
 });
 
 OrderBtn.addEventListener("click", (evt) => {
-
+  HomePage = "Page hide-Page content-container";
+  OrderPage = "Page show-Page content-container";
+  AboutPage = "Page hide-Page content-container";
 });
 
 AboutBtn.addEventListener("click", (evt) => {
-
+  HomePage + "Page hide-Page content-container";
+  OrderPage = "Page hide-Page content-container";
+  AboutPage = "Page show-Page content-container";
 });
