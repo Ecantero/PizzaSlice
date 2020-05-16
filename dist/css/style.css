@@ -9,3 +9,17 @@
     width: 400px; */
     border: .5px #000 solid;
 }
+
+.slideshow > img {
+    max-height: 700px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.show-page {
+    display: block;
+}
+
+.hide-page {
+    display: none;
+}

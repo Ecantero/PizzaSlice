@@ -1,11 +1,11 @@
-window.onload = function (params) {
+window.addEventListener("load", function (params) {
     this.collapseNav();
     this.modalControls();
     this.slideShowInit();
     this.messageInit();
     this.hoverInit();
     this.toastInit();
-};
+});
 
 function collapseNav() {
     var navs = document.getElementsByClassName("nav-toggle");
@@ -160,13 +160,14 @@ function messageInit() {
     };
     request.send(null);  
 
-    var tipIndex = Math.floor(Math.random() * tipArr.length);
-
-    var quoteTips = document.querySelectorAll(".quote-tip");
-
-    for (let index = 0; index < quoteTips.length; index++) {
-        const tip = quoteTips.item(index);
-        tip.innerHTML = tipArr[tipIndex];
+    if(tipArr != undefined && tipArr != null) {
+        var tipIndex = Math.floor(Math.random() * tipArr.length);
+        var quoteTips = document.querySelectorAll(".quote-tip");
+    
+        for (let index = 0; index < quoteTips.length; index++) {
+            const tip = quoteTips.item(index);
+            tip.innerHTML = tipArr[tipIndex];
+        }
     }
 }
 
