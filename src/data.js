@@ -6,10 +6,25 @@ export let data = {
         {"X-large": "$25.00"},
     ],
     toppings: [
-        {"name": "pepperoni"},
-        {"name": "sausage"},
-        {"name": "hawaiian"},
-        {"name": "cheese"},
-        {"name": "three meats"},
+        {
+            "name": "pepperoni",
+            "prefix": ""
+        },
+        {
+            "name": "sausage",
+            "prefix": ""
+        },
+        {
+            "name": "hawaiian",
+            "prefix": ""
+        },
+        {
+            "name": "cheese",
+            "prefix": ""
+        },
+        {
+            "name": "three meats",
+            "prefix": ""
+        },
     ]
 }
