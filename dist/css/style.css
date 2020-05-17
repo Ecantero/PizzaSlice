@@ -10,6 +10,10 @@
     border: .5px #000 solid;
 }
 
+#logo {
+    width: 70px;
+}
+
 .slideshow > img {
     max-height: 700px;
     overflow: hidden;
@@ -17,9 +21,35 @@
 }
 
 .show-page {
-    display: block;
+    display: block !important;
 }
 
 .hide-page {
-    display: none;
+    display: none !important;
+}
+
+.button.nav-button {
+    margin-right: 0 !important;
+}
+
+.nav-button {
+    min-height: 6rem;
+    display: inline-block;
+    background-color: #FF5432;
+    transition: background-color 0.3s ease-in;
+}
+
+.nav-button:hover {
+    background-color: rgb(195, 58, 31);
+}
+
+.nav-button > span {
+    vertical-align: middle;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 64px;
+}
+
+nav {
+    max-height: 6rem;
 }
