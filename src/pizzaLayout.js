@@ -1,15 +1,20 @@
 
 export const HomeContent = `
-    <h1>Home</h1>
-    <div id="">
-        possible slideshow??
-    </div>
-    <div id="preSelected">
-        Order from our five 
-    </div>
-    <div id="buildOwn">
-        Build Your Own
-    </div>
+    <section class="content-container">
+        <h1>Home</h1>
+        <h3 id="preSelected">Order from our five specials!</h3>
+        <h4 id="buildOwn">Or build Your Own!</h4>
+    </section>
+    <section class="content-container">
+        <div class="slideshow" id="pizzaShow">
+            <img class="img-show" src="Slideshow/pizza_1.jpg" alt="" srcset="">
+            <img class="img-hide" src="Slideshow/pizza_2.png" alt="" srcset="">
+            <img class="img-hide" src="Slideshow/pizza_3.jpg" alt="" srcset="">
+            <div class="leftControl font-size-9-bold" data-target="pizzaShow"><</div>
+            <div class="rightControl font-size-9-bold" data-target="pizzaShow">></div>
+            <div class="img-indicator"></div>
+        </div>
+    </section>
 `;
 
 export const OrderContent = `

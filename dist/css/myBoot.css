@@ -1349,7 +1349,7 @@ nav {
 }
 
 .inner-nav {
-  padding: 0.25rem 1rem;
+  padding: 0.0rem 1rem;
   display: flex;
   align-items: center;
 }
@@ -1478,9 +1478,11 @@ nav {
   font: bold normal 1.1rem/120% "Source Sans Pro";
   cursor: pointer;
   padding: 0.1rem;
+  padding-bottom: 0rem;
   transition: border 0.1s, background-color 0.1s;
   text-decoration: none;
   user-select: none;
+  text-align: center;
 }
 .button.nav-button-dark:hover {
   background-color: #1a1a1a;
