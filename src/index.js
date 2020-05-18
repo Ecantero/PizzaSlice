@@ -3,6 +3,8 @@ import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
 
 var controller;
+var totalPrice;
+var toppingsUsed;
 
 const content = document.getElementById("Pizza");
 
@@ -50,9 +52,54 @@ AboutBtn.addEventListener("click", (evt) => {
   document.getElementById("HomePage").classList.replace("show-page", "hide-page");
 });
 
+for (let index = 0; index < toppings.length; index++) {
+  const element = document.querySelector("#" + toppings.item(index).id + " > label > input");
+  element.addEventListener("change", (evt) => {
+    if(element.checked == true) {
+      var checkContent = `
+      <li id="${toppings.item(index).id}_left">
+          <label class="checkContainer">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark">Left</span>
+          </label>
+      </li>
+      <li id="${toppings.item(index).id}_right">
+          <label class="checkContainer">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark">Right</span>
+          </label>
+      </li>
+      <li id="${toppings.item(index).id}_extra">
+          <label class="checkContainer">
+              <input type="checkbox">
+              <span class="checkmark">Extra</span>
+          </label>
+      </li>
+      `
+      controller.setActive(`${toppings.item(index).id}_left`, true);
+      controller.setActive(`${toppings.item(index).id}_right`, true);
+
+      var insertPoint = document.querySelector(`#${toppings.item(index).id} > div`)
+      Layout.InsertElement("ul", "", `${toppings.item(index).id}_setting_list`, null, checkContent, insertPoint);
+      
+      document.querySelector(`#${toppings.item(index).id}_left > label > input`).addEventListener("change", (evt) => {
+        controller.setActive(`${toppings.item(index).id}_left`, evt.target.checked);
+      });
+
+      document.querySelector(`#${toppings.item(index).id}_right > label > input`).addEventListener("change", (evt) => {
+        controller.setActive(`${toppings.item(index).id}_right`, evt.target.checked);
+      })
+    } else {
+      var listNotNeeded = document.querySelector(`#${toppings.item(index).id} > div > ul`);
+      listNotNeeded.remove();
+    }
+  });
+}
+
 window.addEventListener("load", loaded => {
   LocateCanvas();
   var cheese = new PizzaState("Cheese", "Toppings/Cheese.png", 0, 0, 250, 150);
+  //var sausage = new PizzaState("sau", )
   controller = new PizzaStateController([cheese]);
 
   controller.setActive("Cheese", true);

@@ -120,6 +120,10 @@
     transform: rotate(45deg);
   }
 
+.eventClearFix {
+    margin-left: 10px;
+}
+
 nav {
     max-height: 6rem;
 }

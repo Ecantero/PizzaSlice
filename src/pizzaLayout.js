@@ -29,60 +29,90 @@ export const OrderContent = `
                         <input type="checkbox">
                         <span class="checkmark">Bacon</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="bef">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Beef</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="gbp">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Green Bell Peppers</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="ham">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Ham</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="mtb">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Meatballs</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="exc">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Mushrooms</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="oli">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Olives</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="pep">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Pepperoni</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="pok">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Pork</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
                 <li id="sau">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Sausage</span>
                     </label>
+                    <div class="eventClearFix">
+
+                    </div>
                 </li>
             </ul>
         </div>
