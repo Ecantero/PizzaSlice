@@ -19,27 +19,30 @@ export const HomeContent = `
 
 export const OrderContent = `
     <h1>Order</h1>
-    <canvas id="pizzaCanvas"></canvas>
-    <div id="selection">
-        <ul>
-            <li>Bacon</li>
-            <li>Banana Pepper</li>
-            <li>Beef</li>
-            <li>Chesse</li>
-            <li>Chicken</li>
-            <li>Green Bell Pepper</li>
-            <li>Ham</li>
-            <li>Italian Sauage</li>
-            <li>Meatball</li>
-            <li>Mushroom</li>
-            <li>Olives</li>
-            <li>Onion</li>
-            <li>Pepperoni</li>
-            <li>Pineappple</li>
-            <li>Pork</li>
-            <li>Sausage</li>
-        </ul>
-    </div>
+    <div id="container">
+        <canvas id="pizzaCanvas"></canvas>
+        <div id="selection">
+            <h3>Toppings</h3>
+            <ul>
+                <li id="bac">Bacon</li>
+                <li id="ban">Banana Pepper</li>
+                <li id="bef">Beef</li>
+                <li id="che">Chesse</li>
+                <li id="ckn">Chicken</li>
+                <li id="gbp">Green Bell Pepper</li>
+                <li id="ham">Ham</li>
+                <li id="ita">Italian Sauage</li>
+                <li id="mtb">Meatball</li>
+                <li id="mus">Mushroom</li>
+                <li id="oli">Olives</li>
+                <li id="oni">Onion</li>
+                <li id="pep">Pepperoni</li>
+                <li id="pin">Pineappple</li>
+                <li id="pok">Pork</li>
+                <li id="sau">Sausage</li>
+            </ul>
+        </div>
+    </div>    
 `;
 
 export const AboutContent = `

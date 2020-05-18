@@ -27,6 +27,23 @@ const HomeBtn = document.getElementById("Home");
 const OrderBtn = document.getElementById("Order");
 const AboutBtn = document.getElementById("AboutUs");
 
+const bac = document.getElementById("bac");
+const ban = document.getElementById("ban");
+const bef = document.getElementById("bef");
+const che = document.getElementById("che");
+const ckn = document.getElementById("ckn");
+const gbp = document.getElementById("gbp");
+const ham = document.getElementById("ham");
+const ita = document.getElementById("ita");
+const mtb = document.getElementById("mtb");
+const mus = document.getElementById("mus");
+const oli = document.getElementById("oli");
+const oni = document.getElementById("oni");
+const pep = document.getElementById("pep");
+const pin = document.getElementById("pin");
+const pok = document.getElementById("pok");
+const sau = document.getElementById("sau");
+
 HomeBtn.addEventListener("click", (evt) => {
   //Use element.classList to change classes
   document.getElementById("HomePage").classList.replace("hide-page", "show-page");
