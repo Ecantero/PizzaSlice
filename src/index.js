@@ -2,6 +2,8 @@ import { HomeContent, OrderContent, AboutContent, FiveContent } from "./pizzaLay
 import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
 
+var controller;
+
 const content = document.getElementById("Pizza");
 
 // const banner = Layout.InsertElement("div", "site-banner banner-shadow", "siteBanner", null, "", content);
@@ -27,22 +29,7 @@ const HomeBtn = document.getElementById("Home");
 const OrderBtn = document.getElementById("Order");
 const AboutBtn = document.getElementById("AboutUs");
 
-const bac = document.getElementById("bac");
-const ban = document.getElementById("ban");
-const bef = document.getElementById("bef");
-const che = document.getElementById("che");
-const ckn = document.getElementById("ckn");
-const gbp = document.getElementById("gbp");
-const ham = document.getElementById("ham");
-const ita = document.getElementById("ita");
-const mtb = document.getElementById("mtb");
-const mus = document.getElementById("mus");
-const oli = document.getElementById("oli");
-const oni = document.getElementById("oni");
-const pep = document.getElementById("pep");
-const pin = document.getElementById("pin");
-const pok = document.getElementById("pok");
-const sau = document.getElementById("sau");
+const toppings = document.querySelectorAll("#toppingsList > li");
 
 HomeBtn.addEventListener("click", (evt) => {
   //Use element.classList to change classes
@@ -66,7 +53,7 @@ AboutBtn.addEventListener("click", (evt) => {
 window.addEventListener("load", loaded => {
   LocateCanvas();
   var cheese = new PizzaState("Cheese", "Toppings/Cheese.png", 0, 0, 250, 150);
-  var controller = new PizzaStateController([cheese]);
+  controller = new PizzaStateController([cheese]);
 
   controller.setActive("Cheese", true);
   InitializeImages(controller);

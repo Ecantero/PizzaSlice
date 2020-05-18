@@ -19,27 +19,71 @@ export const HomeContent = `
 
 export const OrderContent = `
     <h1>Order</h1>
-    <div id="container">
+    <div class="content-container">
         <canvas id="pizzaCanvas"></canvas>
         <div id="selection">
             <h3>Toppings</h3>
-            <ul>
-                <li id="bac">Bacon</li>
-                <li id="ban">Banana Pepper</li>
-                <li id="bef">Beef</li>
-                <li id="che">Chesse</li>
-                <li id="ckn">Chicken</li>
-                <li id="gbp">Green Bell Pepper</li>
-                <li id="ham">Ham</li>
-                <li id="ita">Italian Sauage</li>
-                <li id="mtb">Meatball</li>
-                <li id="mus">Mushroom</li>
-                <li id="oli">Olives</li>
-                <li id="oni">Onion</li>
-                <li id="pep">Pepperoni</li>
-                <li id="pin">Pineappple</li>
-                <li id="pok">Pork</li>
-                <li id="sau">Sausage</li>
+            <ul id="toppingsList">
+                <li id="bac">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Bacon</span>
+                    </label>
+                </li>
+                <li id="bef">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Beef</span>
+                    </label>
+                </li>
+                <li id="gbp">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Green Bell Peppers</span>
+                    </label>
+                </li>
+                <li id="ham">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Ham</span>
+                    </label>
+                </li>
+                <li id="mtb">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Meatballs</span>
+                    </label>
+                </li>
+                <li id="exc">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Extra Cheese</span>
+                    </label>
+                </li>
+                <li id="oli">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Olives</span>
+                    </label>
+                </li>
+                <li id="pep">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Pepperoni</span>
+                    </label>
+                </li>
+                <li id="pok">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Pork</span>
+                    </label>
+                </li>
+                <li id="sau">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Sausage</span>
+                    </label>
+                </li>
             </ul>
         </div>
     </div>    
