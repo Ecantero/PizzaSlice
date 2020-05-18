@@ -4,8 +4,9 @@ import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
 
 var controller;
-var totalPrice;
-var toppingsUsed;
+var sizePrice = 10;
+var totalPrice = 10;
+var toppingsUsed = 0;
 
 const content = document.getElementById("Pizza");
 
@@ -32,6 +33,9 @@ const OrderBtn = document.getElementById("Order");
 const AboutBtn = document.getElementById("AboutUs");
 
 const toppings = document.querySelectorAll("#toppingsList > li");
+const sizes = document.querySelectorAll('#sizes > label');
+
+const priceDisplay = document.getElementById("priceDisplay");
 
 HomeBtn.addEventListener("click", (evt) => {
   //Use element.classList to change classes
@@ -56,6 +60,17 @@ for (let index = 0; index < toppings.length; index++) {
   const element = document.querySelector("#" + toppings.item(index).id + " > label > input");
   element.addEventListener("change", (evt) => {
     if(element.checked == true) {
+      toppingsUsed ++;
+      if(toppingsUsed <= 1) {
+        totalPrice = sizePrice;
+      } else if(toppingsUsed < 5) {
+        totalPrice = sizePrice + toppingsUsed;
+      } else if(toppingsUsed >= 5) {
+        totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+      }
+      
+      priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+
       var checkContent = `
       <li id="${toppings.item(index).id}_left">
           <label class="checkContainer">
@@ -75,7 +90,7 @@ for (let index = 0; index < toppings.length; index++) {
               <span class="checkmark">Extra</span>
           </label>
       </li>
-      `
+      `;
       controller.setActive(`${toppings.item(index).id}_left`, true);
       controller.setActive(`${toppings.item(index).id}_right`, true);
 
@@ -88,8 +103,43 @@ for (let index = 0; index < toppings.length; index++) {
 
       document.querySelector(`#${toppings.item(index).id}_right > label > input`).addEventListener("change", (evt) => {
         controller.setActive(`${toppings.item(index).id}_right`, evt.target.checked);
-      })
+      });
+
+      document.querySelector(`#${toppings.item(index).id}_extra > label > input`).addEventListener("change", (evt) => {
+        if(evt.target.checked == true) {
+          toppingsUsed++;
+          if(toppingsUsed <= 1) {
+            totalPrice = sizePrice;
+          } else if(toppingsUsed < 5) {
+            totalPrice = sizePrice + toppingsUsed;
+          } else if(toppingsUsed >= 5) {
+            totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+          }
+        } else {
+          toppingsUsed--;
+          if(toppingsUsed <= 1) {
+            totalPrice = sizePrice;
+          } else if(toppingsUsed < 5) {
+            totalPrice = sizePrice + toppingsUsed;
+          } else if(toppingsUsed >= 5) {
+            totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+          }
+        }
+        priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+      });
     } else {
+      toppingsUsed--;
+      if(document.querySelector(`#${toppings.item(index).id}_extra > label > input`).checked) {
+        toppingsUsed--;
+      }
+      if(toppingsUsed <= 1) {
+        totalPrice = sizePrice;
+      } else if(toppingsUsed < 5) {
+        totalPrice = sizePrice + toppingsUsed;
+      } else if(toppingsUsed >= 5) {
+        totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+      }
+      priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
       var listNotNeeded = document.querySelector(`#${toppings.item(index).id} > div > ul`);
       controller.setActive(`${toppings.item(index).id}_left`, false);
       controller.setActive(`${toppings.item(index).id}_right`, false);
@@ -98,7 +148,23 @@ for (let index = 0; index < toppings.length; index++) {
   });
 }
 
+for (let index = 0; index < sizes.length; index++) { 
+  const element = document.querySelector("#" + sizes.item(index).id + " > input");
+  element.addEventListener("change", (evt) => {
+      sizePrice = data.prices[sizes.item(index).id];
+      if(toppingsUsed <= 1) {
+        totalPrice = sizePrice;
+      } else if(toppingsUsed < 5) {
+        totalPrice = sizePrice + toppingsUsed;
+      } else if(toppingsUsed >= 5) {
+        totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+      }
+      priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+  });
+}
+
 window.addEventListener("load", loaded => {
+  priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
   LocateCanvas();
   var toppingArr = [];
 
@@ -113,7 +179,6 @@ window.addEventListener("load", loaded => {
   }
   //var sausage = new PizzaState("sau", )
   controller = new PizzaStateController(toppingArr);
-  console.log(controller.getAllImages());
 
   controller.setActive("Cheese", true);
   InitializeImages(controller);
