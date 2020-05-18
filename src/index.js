@@ -28,43 +28,21 @@ const AboutBtn = document.getElementById("AboutUs");
 
 HomeBtn.addEventListener("click", (evt) => {
   //Use element.classList to change classes
-  if(HomePage.classList.contains("hide-page")) {
-    HomePage.classList.replace("hide-page", "show-page");
-    if(OrderPage.classList.contains("show-page")) {
-      OrderPage.classList.replace("show-page", "hide-page");
-    }
-    if(AboutPage.classList.contains("show-page")) {
-      AboutPage.classList.replace("show-page", "hide-page");
-    }
-  }
+  document.getElementById("HomePage").classList.replace("hide-page", "show-page");
+  document.getElementById("OrderPage").classList.replace("show-page", "hide-page");
+  document.getElementById("AboutPage").classList.replace("show-page", "hide-page");
 });
 
 OrderBtn.addEventListener("click", (evt) => {
-  console.log(OrderPage);
-  if(OrderPage.classList.contains("hide-page")) {
-    OrderPage.classList.replace("hide-page", "show-page");
-    console.log(HomePage.classList.contains("show-page"));
-    if(HomePage.classList.contains("show-page")) {
-      HomePage.classList.replace("show-page", "hide-page");
-      console.log(HomePage.className); 
-    }
-    if(AboutPage.classList.contains("show-page")) {
-      AboutPage.classList.replace("show-page", "hide-page");
-    }
-  }
+  document.getElementById("OrderPage").classList.replace("hide-page", "show-page");
+  document.getElementById("HomePage").classList.replace("show-page", "hide-page");
+  document.getElementById("AboutPage").classList.replace("show-page", "hide-page");
 });
 
 AboutBtn.addEventListener("click", (evt) => {
-  if(AboutPage.classList.contains("hide-page")) {
-    AboutPage.classList.replace("hide-page", "show-page");
-    if(OrderPage.classList.contains("show-page")) {
-      OrderPage.classList.replace("show-page", "hide-page");
-    }
-    if(HomePage.classList.contains("show-page")) {
-      HomePage.classList.remove("show-page");
-      HomePage.classList.add("hide-page");
-    }
-  }
+  document.getElementById("AboutPage").classList.replace("hide-page", "show-page");
+  document.getElementById("OrderPage").classList.replace("show-page", "hide-page");
+  document.getElementById("HomePage").classList.replace("show-page", "hide-page");
 });
 
 window.addEventListener("load", loaded => {

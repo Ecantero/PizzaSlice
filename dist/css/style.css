@@ -33,10 +33,11 @@
 }
 
 .nav-button {
-    min-height: 6rem;
+    padding: 35px 0px;
+    /* min-height: 6rem;
     display: inline-block;
     background-color: #FF5432;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in; */
 }
 
 .nav-button:hover {
@@ -44,10 +45,8 @@
 }
 
 .nav-button > span {
-    vertical-align: middle;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 64px;
 }
 
 nav {

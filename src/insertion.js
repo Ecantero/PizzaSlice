@@ -38,12 +38,3 @@ function InsertElementWithSrc(tag, classes, id, data, content, insertionPoint, s
     return document.getElementById(id);
 }
 
-document.onkeydown = function (event) {
-   if(event.keyCode === 39) {
-       initPizzas();
-   }
-   if(event.keyCode === 37) {
-        initPizzas2();
-    }  
-};
-
