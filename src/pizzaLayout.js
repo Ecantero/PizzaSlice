@@ -20,7 +20,26 @@ export const HomeContent = `
 export const OrderContent = `
     <h1>Order</h1>
     <canvas id="pizzaCanvas"></canvas>
-    <div id="selection"></div>
+    <div id="selection">
+        <ul>
+            <li>Bacon</li>
+            <li>Banana Pepper</li>
+            <li>Beef</li>
+            <li>Chesse</li>
+            <li>Chicken</li>
+            <li>Green Bell Pepper</li>
+            <li>Ham</li>
+            <li>Italian Sauage</li>
+            <li>Meatball</li>
+            <li>Mushroom</li>
+            <li>Olives</li>
+            <li>Onion</li>
+            <li>Pepperoni</li>
+            <li>Pineappple</li>
+            <li>Pork</li>
+            <li>Sausage</li>
+        </ul>
+    </div>
 `;
 
 export const AboutContent = `
@@ -31,18 +50,18 @@ export const AboutContent = `
 export const FiveChoices = `
     <h1>Choose one of our five choices<h1>
     <div id="firstChoice">
-        choice number #1
+        Meat Lover's Pizza
     </div>
     <div id="secondChoice">
-        choice number #2
+        Hawaiian Pizza
     </div>
     <div id="thirdChoice">
-        choice number #3
+        Supreme Pizza
     </div>
     <div id="fourthChoice">
-        choice number #4
+        Hawaiian Chicken Pizza
     </div>
     <div id="fifthChoice">
-        choice number #5
+        Veggie's Lover Pizza
     </div>
 `;

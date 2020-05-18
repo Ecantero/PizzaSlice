@@ -8,23 +8,67 @@ export let data = {
     toppings: [
         {
             "name": "pepperoni",
-            "prefix": ""
+            "prefix": "pepperoni"
         },
         {
             "name": "sausage",
-            "prefix": ""
+            "prefix": "sausage"
         },
         {
-            "name": "hawaiian",
-            "prefix": ""
+            "name": "pineapple",
+            "prefix": "pineapple"
         },
         {
             "name": "cheese",
-            "prefix": ""
+            "prefix": "chesse"
         },
         {
-            "name": "three meats",
-            "prefix": ""
+            "name": "ham",
+            "prefix": "ham"
+        },
+        {
+            "name": "bacon",
+            "prefix": "bacon"
+        },
+        {
+            "name": "bananaPepper",
+            "prefix": "bananaPepper"
+        },
+        {
+            "name": "chicken",
+            "prefix": "chicken"
+        },
+        {
+            "name": "greenBellPepper",
+            "prefix": "greenBellPepper"
+        },
+        {
+            "name": "italianSausage",
+            "prefix": "italianSausage"
+        },
+        {
+            "name": "meatball",
+            "prefix": "meatball"
+        },
+        {
+            "name": "olives",
+            "prefix": "olives"
+        },
+        {
+            "name": "onion",
+            "prefix": "onion"
+        },
+        {
+            "name": "beef",
+            "prefix": "beef"
+        },
+        {
+            "name": "mushroom",
+            "prefix": "mushroom"
+        },
+        {
+            "name": "pork",
+            "prefix": "pork"
         },
     ]
 }
