@@ -43,8 +43,8 @@ export let data = {
             "prefix": "greenBellPepper"
         },
         {
-            "name": "italianSausage",
-            "prefix": "italianSausage"
+            "name": "spinach",
+            "prefix": "spin"
         },
         {
             "name": "meatball",
