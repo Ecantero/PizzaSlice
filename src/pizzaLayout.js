@@ -57,7 +57,7 @@ export const OrderContent = `
                 <li id="exc">
                     <label class="checkContainer">
                         <input type="checkbox">
-                        <span class="checkmark">Extra Cheese</span>
+                        <span class="checkmark">Mushrooms</span>
                     </label>
                 </li>
                 <li id="oli">
