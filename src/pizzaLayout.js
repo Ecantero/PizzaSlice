@@ -1,4 +1,3 @@
-
 export const HomeContent = `
     <section class="content-container">
         <h1>Bambinos Pizza Place</h1>
