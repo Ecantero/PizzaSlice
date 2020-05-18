@@ -89,6 +89,7 @@ export function InitializeImages(controller) {
 //Loop setup to clear once a frame then, once the images are loaded, display controller states that are set to active
 export function Loop() {
     CanvasContext.clearRect(0, 0, 1000, 1000);
+    console.log(imagesLoaded);
     if(imagesLoaded) {
         for (let index = 0; index < globalController.pizzaStates.length; index++) {
             const state = globalController.pizzaStates[index];

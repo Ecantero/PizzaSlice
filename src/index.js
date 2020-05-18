@@ -1,4 +1,5 @@
 import { HomeContent, OrderContent, AboutContent } from "./pizzaLayout";
+import { data } from "./data";
 import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
 
@@ -90,6 +91,8 @@ for (let index = 0; index < toppings.length; index++) {
       })
     } else {
       var listNotNeeded = document.querySelector(`#${toppings.item(index).id} > div > ul`);
+      controller.setActive(`${toppings.item(index).id}_left`, false);
+      controller.setActive(`${toppings.item(index).id}_right`, false);
       listNotNeeded.remove();
     }
   });
@@ -97,9 +100,20 @@ for (let index = 0; index < toppings.length; index++) {
 
 window.addEventListener("load", loaded => {
   LocateCanvas();
+  var toppingArr = [];
+
   var cheese = new PizzaState("Cheese", "Toppings/Cheese.png", 0, 0, 250, 150);
+  toppingArr.push(cheese);
+  for (let index = 0; index < data.toppings.length; index++) {
+    const element = data.toppings[index];
+    var leftTop = new PizzaState(`${element.name}_left`, `Toppings/${element.prefix}_left.png`, 0, -10, 150, 150);
+    var rightTop = new PizzaState(`${element.name}_right`, `Toppings/${element.prefix}_right.png`, 100, 0, 150, 150);
+    toppingArr.push(leftTop);
+    toppingArr.push(rightTop);
+  }
   //var sausage = new PizzaState("sau", )
-  controller = new PizzaStateController([cheese]);
+  controller = new PizzaStateController(toppingArr);
+  console.log(controller.getAllImages());
 
   controller.setActive("Cheese", true);
   InitializeImages(controller);

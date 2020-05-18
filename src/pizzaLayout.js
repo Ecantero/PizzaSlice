@@ -24,7 +24,7 @@ export const OrderContent = `
         <div id="selection">
             <h3>Toppings</h3>
             <ul id="toppingsList">
-                <li id="bac">
+                <li id="bacon">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Bacon</span>
@@ -33,7 +33,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="bef">
+                <li id="beef">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Beef</span>
@@ -42,7 +42,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="gbp">
+                <li id="greenBellPepper">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Green Bell Peppers</span>
@@ -60,7 +60,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="mtb">
+                <li id="meatballs">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Meatballs</span>
@@ -69,7 +69,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="exc">
+                <li id="mushrooms">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Mushrooms</span>
@@ -78,7 +78,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="oli">
+                <li id="olives">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Olives</span>
@@ -87,7 +87,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="pep">
+                <li id="pepperoni">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Pepperoni</span>
@@ -96,7 +96,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="pok">
+                <li id="pork">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Pork</span>
@@ -105,7 +105,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="sau">
+                <li id="sausage">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Sausage</span>

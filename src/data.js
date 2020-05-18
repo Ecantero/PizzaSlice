@@ -18,14 +18,10 @@ export let data = {
             "name": "pineapple",
             "prefix": "pineapple"
         },
-        {
-            "name": "cheese",
-            "prefix": "chesse"
-        },
-        {
-            "name": "ham",
-            "prefix": "ham"
-        },
+        // {
+        //     "name": "ham",
+        //     "prefix": "ham"
+        // },
         {
             "name": "bacon",
             "prefix": "bacon"
@@ -34,41 +30,37 @@ export let data = {
             "name": "bananaPepper",
             "prefix": "bananaPepper"
         },
+        // {
+        //     "name": "chicken",
+        //     "prefix": "chicken"
+        // },
+        // {
+        //     "name": "greenBellPepper",
+        //     "prefix": "greenBellPepper"
+        // },
+        // {
+        //     "name": "spinach",
+        //     "prefix": "spin"
+        // },
+        // {
+        //     "name": "meatball",
+        //     "prefix": "meatball"
+        // },
+        // {
+        //     "name": "olives",
+        //     "prefix": "olives"
+        // },
+        // {
+        //     "name": "beef",
+        //     "prefix": "beef"
+        // },
         {
-            "name": "chicken",
-            "prefix": "chicken"
-        },
-        {
-            "name": "greenBellPepper",
-            "prefix": "greenBellPepper"
-        },
-        {
-            "name": "spinach",
-            "prefix": "spin"
-        },
-        {
-            "name": "meatball",
-            "prefix": "meatball"
-        },
-        {
-            "name": "olives",
-            "prefix": "olives"
-        },
-        {
-            "name": "onion",
-            "prefix": "onion"
-        },
-        {
-            "name": "beef",
-            "prefix": "beef"
-        },
-        {
-            "name": "mushroom",
+            "name": "mushrooms",
             "prefix": "mushroom"
         },
-        {
-            "name": "pork",
-            "prefix": "pork"
-        },
+        // {
+        //     "name": "pork",
+        //     "prefix": "pork"
+        // },
     ]
 }
