@@ -106,8 +106,8 @@ window.addEventListener("load", loaded => {
   toppingArr.push(cheese);
   for (let index = 0; index < data.toppings.length; index++) {
     const element = data.toppings[index];
-    var leftTop = new PizzaState(`${element.name}_left`, `Toppings/${element.prefix}_left.png`, 0, -10, 150, 150);
-    var rightTop = new PizzaState(`${element.name}_right`, `Toppings/${element.prefix}_right.png`, 100, 0, 150, 150);
+    var leftTop = new PizzaState(`${element.name}_left`, `Toppings/${element.prefix}_left.png`, 10, 10, 120, 120);
+    var rightTop = new PizzaState(`${element.name}_right`, `Toppings/${element.prefix}_right.png`, 110, 10, 120, 120);
     toppingArr.push(leftTop);
     toppingArr.push(rightTop);
   }

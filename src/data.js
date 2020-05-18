@@ -18,10 +18,10 @@ export let data = {
             "name": "pineapple",
             "prefix": "pineapple"
         },
-        // {
-        //     "name": "ham",
-        //     "prefix": "ham"
-        // },
+        {
+            "name": "ham",
+            "prefix": "ham"
+        },
         {
             "name": "bacon",
             "prefix": "bacon"
@@ -30,18 +30,18 @@ export let data = {
             "name": "bananaPepper",
             "prefix": "bananaPepper"
         },
-        // {
-        //     "name": "chicken",
-        //     "prefix": "chicken"
-        // },
-        // {
-        //     "name": "greenBellPepper",
-        //     "prefix": "greenBellPepper"
-        // },
-        // {
-        //     "name": "spinach",
-        //     "prefix": "spin"
-        // },
+        {
+            "name": "hot_cheeto",
+            "prefix": "hot_cheeto"
+        },
+        {
+            "name": "bananaPepper",
+            "prefix": "bananaPepper"
+        },
+        {
+            "name": "spinache",
+            "prefix": "spinache"
+        },
         // {
         //     "name": "meatball",
         //     "prefix": "meatball"
@@ -50,17 +50,17 @@ export let data = {
         //     "name": "olives",
         //     "prefix": "olives"
         // },
-        // {
-        //     "name": "beef",
-        //     "prefix": "beef"
-        // },
+        {
+            "name": "onion",
+            "prefix": "onion"
+        },
         {
             "name": "mushrooms",
             "prefix": "mushroom"
         },
-        // {
-        //     "name": "pork",
-        //     "prefix": "pork"
-        // },
+        {
+            "name": "bacon",
+            "prefix": "bacon"
+        },
     ]
 }
