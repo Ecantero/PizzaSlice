@@ -49,7 +49,7 @@ export const AboutContent = `
     </section>
 `;
 
-export const FiveChoices = `
+export const FiveContent = `
     <h1>Choose one of our five choices<h1>
     <div id="firstChoice">
         Meat Lover's Pizza

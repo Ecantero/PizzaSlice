@@ -1,4 +1,4 @@
-import { HomeContent, OrderContent, AboutContent } from "./pizzaLayout";
+import { HomeContent, OrderContent, AboutContent, FiveContent } from "./pizzaLayout";
 import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
 
@@ -21,6 +21,7 @@ const Btn3 = Layout.InsertElement("div", "button nav-button bg-red-orange font-s
 const HomePage = Layout.InsertElement("div", "Page show-page full-container", "HomePage", null, HomeContent, content);
 const OrderPage = Layout.InsertElement("div", "Page hide-page full-container", "OrderPage", null, OrderContent, content);
 const AboutPage = Layout.InsertElement("div", "Page hide-page full-container", "AboutPage", null, AboutContent, content);
+const FivePage = Layout.InsertElement("div", "Page hide-page full-container", "Five choices", null, FiveContent, content);
 
 const HomeBtn = document.getElementById("Home");
 const OrderBtn = document.getElementById("Order");
@@ -47,7 +48,7 @@ AboutBtn.addEventListener("click", (evt) => {
 
 window.addEventListener("load", loaded => {
   LocateCanvas();
-  var cheese = new PizzaState("Cheese", "Toppings/Cheese.png", 0, 0, 150, 150);
+  var cheese = new PizzaState("Cheese", "Toppings/Cheese.png", 0, 0, 250, 150);
   var controller = new PizzaStateController([cheese]);
 
   controller.setActive("Cheese", true);
