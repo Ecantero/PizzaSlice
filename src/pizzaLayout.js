@@ -33,19 +33,19 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="beef">
+                <li id="pineapple">
                     <label class="checkContainer">
                         <input type="checkbox">
-                        <span class="checkmark">Beef</span>
+                        <span class="checkmark">Pineapples</span>
                     </label>
                     <div class="eventClearFix">
 
                     </div>
                 </li>
-                <li id="greenBellPepper">
+                <li id="bananaPepper">
                     <label class="checkContainer">
                         <input type="checkbox">
-                        <span class="checkmark">Green Bell Peppers</span>
+                        <span class="checkmark">Banana Peppers</span>
                     </label>
                     <div class="eventClearFix">
 
