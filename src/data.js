@@ -55,7 +55,7 @@ export let data = {
             "prefix": "onion"
         },
         {
-            "name": "mushrooms",
+            "name": "mushroom",
             "prefix": "mushroom"
         },
         {
