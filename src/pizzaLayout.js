@@ -80,7 +80,7 @@ export const OrderContent = `
                 <li id="spinache">
                     <label class="checkContainer">
                         <input type="checkbox">
-                        <span class="checkmark">Spinache</span>
+                        <span class="checkmark">Spinach</span>
                     </label>
                     <div class="eventClearFix">
 
@@ -95,15 +95,6 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="bacon">
-                    <label class="checkContainer">
-                        <input type="checkbox">
-                        <span class="checkmark">Bacon</span>
-                    </label>
-                    <div class="eventClearFix">
-
-                    </div>
-                </li>
                 <li id="sausage">
                     <label class="checkContainer">
                         <input type="checkbox">
@@ -113,14 +104,36 @@ export const OrderContent = `
 
                     </div>
                 </li>
+                <li id="onion">
+                    <label class="checkContainer">
+                        <input type="checkbox">
+                        <span class="checkmark">Onion</span>
+                    </label>
+                    <div class="eventClearFix">
+
+                    </div>
+                </li>
             </ul>
         </div>
-    </div>    
+    </div>    s
 `;
 
 export const AboutContent = `
     <section class="content-container">
         <h1>About Us</h1>
-        <p>Shadow the Hedgehog's a bitch-ass motherfucker, who pissed on my fucking wife. That's right, he took his hedgehog fuckin' quilly dick out and he pissed on my fucking wife, and he said his dick was "THIS BIG", and I said that's disgusting, so I'm making a callout post on my Twitter-dot-com, Shadow the Hedgehog, you got a small dick, it's the size of this walnut except WAY smaller. And guess what? Here's what my dong looks like! THAT'S RIGHT, BABY. TALL POINTS, NO QUILLS, NO PILLOWS, LOOK AT THAT, IT LOOKS LIKE TWO BALLS AND A BONG. He fucked my wife, so guess what? I'M GONNA FUCK THE EARTH! That's right, this is what you get! MY SUPER LASER PISS! Except I'm not gonna piss on the earth. I'm gonna go higher. I'M PISSING ON THE MOON! How do you like that, OBAMA? I PISSED ON THE MOON, YOU IDIOT! You have TWENTY THREE HOURS before the piss DRRRRRROPLETS hit the fucking earth, now get out of my fucking sight before I piss on you too!</p>
+        <br>
+        <p>The secret to success is much like the secret to making a better pizza - the more you put into it, 
+        the more you get out of it. Our pizza family is as hungry for perfection today as we were when we first 
+        opened our doors more than 2 weeks ago. And we're driven to be the best at making innovative new products and recipes, maybe.</p>
+        <br>
+        <p>Quality is at our core. It’s the foundation we started with, from the first Bambinos Pizza Place that was made in a janitors closet in 
+        El Pase, Texas, to opening up more locations around the world.</p>
+        <br>
+        <p>We don’t use cheap and more processed ingredients. Whether it's our signature sauce, toppings, our original fresh dough
+        , or even the box itself, we invest in our ingredients to ensure that we always give you the finest quality pizza.</p>
+        <br>
+        <p>For you, it’s not just a better pizza. It’s a family gathering, memorable birthday, work celebration or simply a great meal. 
+        It’s our goal to make sure you always have the best ingredients for every occasion.</p>
+        
     </section>
 `;
