@@ -69,6 +69,14 @@ AboutBtn.addEventListener("click", (evt) => {
 
 Supreme.addEventListener("click", (evt) => {
   console.log("supreme");
+  controller.setActive("Cheese", true);
+  for (let i = 0; i < data.toppings.length; i++) {
+    const topping = data.toppings[i].name;
+    if (topping != "Chesse") {
+      controller.setActive(topping + "_left", false);
+      controller.setActive(topping + "_right", false);
+    }
+  }
   controller.setActive("mushroom_left", true);
   controller.setActive("mushroom_right", true);
   controller.setActive("bananaPepper_left", true);
@@ -86,6 +94,14 @@ Supreme.addEventListener("click", (evt) => {
 
 Veggies.addEventListener("click", (evt) => {
   console.log("veggies");
+  controller.setActive("Cheese", true);
+  for (let i = 0; i < data.toppings.length; i++) {
+    const topping = data.toppings[i].name;
+    if (topping != "Chesse") {
+      controller.setActive(topping + "_left", false);
+      controller.setActive(topping + "_right", false);
+    }
+  }
   controller.setActive("mushroom_left", true);
   controller.setActive("mushroom_right", true);
   controller.setActive("bananaPepper_left", true);
@@ -101,6 +117,14 @@ Veggies.addEventListener("click", (evt) => {
 
 Hawaiian.addEventListener("click", (evt) => {
   console.log("hawaiian");
+  controller.setActive("Cheese", true);
+  for (let i = 0; i < data.toppings.length; i++) {
+    const topping = data.toppings[i].name;
+    if (topping != "Chesse") {
+      controller.setActive(topping + "_left", false);
+      controller.setActive(topping + "_right", false);
+    }
+  }
   controller.setActive("pineapple_left", true);
   controller.setActive("pineapple_right", true);
   controller.setActive("ham_left", true);
@@ -112,6 +136,14 @@ Hawaiian.addEventListener("click", (evt) => {
 
 MeatLover.addEventListener("click", (evt) => {
   console.log("meat lover");
+  controller.setActive("Cheese", true);
+  for (let i = 0; i < data.toppings.length; i++) {
+    const topping = data.toppings[i].name;
+    if (topping != "Chesse") {
+      controller.setActive(topping + "_left", false);
+      controller.setActive(topping + "_right", false);
+    }
+  }
   controller.setActive("pepperoni_left", true);
   controller.setActive("pepperoni_right", true);
   controller.setActive("bacon_left", true);
@@ -127,6 +159,14 @@ MeatLover.addEventListener("click", (evt) => {
 
 TripleThreat.addEventListener("click", (evt) => {
   console.log("triple threat");
+  controller.setActive("Cheese", true);
+  for (let i = 0; i < data.toppings.length; i++) {
+    const topping = data.toppings[i].name;
+    if (topping != "Chesse") {
+      controller.setActive(topping + "_left", false);
+      controller.setActive(topping + "_right", false);
+    }
+  }
   controller.setActive("pepperoni_left", true);
   controller.setActive("pepperoni_right", true);
   controller.setActive("bacon_left", true);
