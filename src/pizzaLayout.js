@@ -22,6 +22,7 @@ export const OrderContent = `
         <div id="orderinfo">
             <canvas id="pizzaCanvas"></canvas>
             <h3 id="priceDisplay"></h3>
+            <h3 id="specialPrice" class="specialPriceHidden">Special 5+ Topping Price!!</h3>
         </div>
         <div id="selection">
             <h3>Toppings</h3>

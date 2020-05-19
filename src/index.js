@@ -164,10 +164,13 @@ for (let index = 0; index < toppings.length; index++) {
       toppingsUsed ++;
       if(toppingsUsed <= 1) {
         totalPrice = sizePrice;
+        document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
       } else if(toppingsUsed < 5) {
         totalPrice = sizePrice + toppingsUsed;
+        document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
       } else if(toppingsUsed >= 5) {
         totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+        document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
       }
       
       priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
@@ -211,10 +214,13 @@ for (let index = 0; index < toppings.length; index++) {
           toppingsUsed++;
           if(toppingsUsed <= 1) {
             totalPrice = sizePrice;
+            document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
           } else if(toppingsUsed < 5) {
             totalPrice = sizePrice + toppingsUsed;
+            document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
           } else if(toppingsUsed >= 5) {
             totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+            document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
           }
         } else {
           toppingsUsed--;
@@ -235,10 +241,13 @@ for (let index = 0; index < toppings.length; index++) {
       }
       if(toppingsUsed <= 1) {
         totalPrice = sizePrice;
+        document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
       } else if(toppingsUsed < 5) {
         totalPrice = sizePrice + toppingsUsed;
+        document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
       } else if(toppingsUsed >= 5) {
         totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+        document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
       }
       priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
       var listNotNeeded = document.querySelector(`#${toppings.item(index).id} > div > ul`);
@@ -255,10 +264,13 @@ for (let index = 0; index < sizes.length; index++) {
       sizePrice = data.prices[sizes.item(index).id];
       if(toppingsUsed <= 1) {
         totalPrice = sizePrice;
+        document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
       } else if(toppingsUsed < 5) {
         totalPrice = sizePrice + toppingsUsed;
+        document.getElementById("specialPrice").classList.replace("specialPriceShow", "specialPriceHidden");
       } else if(toppingsUsed >= 5) {
         totalPrice = sizePrice + 3 + (toppingsUsed - 5);
+        document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
       }
       priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
   });

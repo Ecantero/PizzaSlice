@@ -49,6 +49,14 @@
     justify-content: space-around;
 }
 
+.specialPriceHidden {
+    display: none;
+}
+
+.specialPriceShow {
+    display: block;
+}
+
 @media (max-width: 1370px) {
     #pizzaContainer {
         display: block;
