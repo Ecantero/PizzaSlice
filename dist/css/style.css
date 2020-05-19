@@ -49,6 +49,18 @@
     justify-content: space-around;
 }
 
+@media (max-width: 1370px) {
+    #pizzaContainer {
+        display: block;
+    }
+}
+
+@media (max-width: 550px) {
+    .match-container {
+        width: 80%;
+    }
+}
+
 .slideshow > img {
     max-height: 700px;
     overflow: hidden;

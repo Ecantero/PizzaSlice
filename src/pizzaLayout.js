@@ -71,7 +71,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="mushrooms">
+                <li id="mushroom">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Mushrooms</span>

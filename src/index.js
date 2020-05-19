@@ -19,7 +19,7 @@ const navBar = Layout.InsertElement("nav", "sticky-nav bg-red-orange", "topNav",
 const innerNav = Layout.InsertElement("div", "inner-nav match-container", "topInner", null, "", navBar);
 const logo = Layout.InsertElementWithSrc("img", "nav-logo bottom-left", "logo", null, "", innerNav, "logo.png");
 
-const Btn1 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "Home", null, "<span>HOME PAGE</span>", innerNav);
+const Btn1 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "Home", null, "<span>HOME</span>", innerNav);
 const Btn2 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "Order", null, "<span>ORDER</span>", innerNav);
 const Btn3 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "AboutUs", null, "<span>ABOUT</span>", innerNav);
 
@@ -69,16 +69,21 @@ AboutBtn.addEventListener("click", (evt) => {
 
 Supreme.addEventListener("click", (evt) => {
   console.log("supreme");
-  controller.setActive("mushroom_left", true);
-  controller.setActive("mushroom_right", true);
-  controller.setActive("bananaPepper_left", true);
-  controller.setActive("bananaPepper_right", true);
-  controller.setActive("hot_cheeto_left", true);
-  controller.setActive("hot_cheeto_right", true);
-  controller.setActive("pepperoni_left", true);
-  controller.setActive("pepperoni_right", true);
-  controller.setActive("ham_left", true);
-  controller.setActive("ham_right", true);
+  // controller.setActive("mushroom_left", true);
+  // controller.setActive("mushroom_right", true);
+  document.querySelector("#mushroom > label > input").click();
+  // controller.setActive("bananaPepper_left", true);
+  // controller.setActive("bananaPepper_right", true);
+  document.querySelector("#bananaPepper > label > input").click();
+  // controller.setActive("hot_cheeto_left", true);
+  // controller.setActive("hot_cheeto_right", true);
+  document.querySelector("#hot_cheeto > label > input").click();
+  // controller.setActive("pepperoni_left", true);
+  // controller.setActive("pepperoni_right", true);
+  document.querySelector("#pepperoni > label > input").click();
+  // controller.setActive("ham_left", true);
+  // controller.setActive("ham_right", true)
+  document.querySelector("#ham > label > input").click();;
   Order.classList.replace("hide-page", "show-page");
   Home.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
@@ -86,14 +91,18 @@ Supreme.addEventListener("click", (evt) => {
 
 Veggies.addEventListener("click", (evt) => {
   console.log("veggies");
-  controller.setActive("mushroom_left", true);
-  controller.setActive("mushroom_right", true);
-  controller.setActive("bananaPepper_left", true);
-  controller.setActive("bananaPepper_right", true);
-  controller.setActive("pineapple_left", true);
-  controller.setActive("pineapple_right", true);
-  controller.setActive("spinache_left", true);
-  controller.setActive("spinache_right", true);
+  // controller.setActive("mushroom_left", true);
+  // controller.setActive("mushroom_right", true);
+  document.querySelector("#mushroom > label > input").click();
+  // controller.setActive("bananaPepper_left", true);
+  // controller.setActive("bananaPepper_right", true);
+  document.querySelector("#bananaPepper > label > input").click();
+  // controller.setActive("pineapple_left", true);
+  // controller.setActive("pineapple_right", true);
+  document.querySelector("#pineapple > label > input").click();
+  // controller.setActive("spinache_left", true);
+  // controller.setActive("spinache_right", true);
+  document.querySelector("#spinache > label > input").click();
   Order.classList.replace("hide-page", "show-page");
   Home.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
@@ -101,10 +110,12 @@ Veggies.addEventListener("click", (evt) => {
 
 Hawaiian.addEventListener("click", (evt) => {
   console.log("hawaiian");
-  controller.setActive("pineapple_left", true);
-  controller.setActive("pineapple_right", true);
-  controller.setActive("ham_left", true);
-  controller.setActive("ham_right", true);
+  // controller.setActive("pineapple_left", true);
+  // controller.setActive("pineapple_right", true);
+  document.querySelector("#pineapple > label > input").click();
+  // controller.setActive("ham_left", true);
+  // controller.setActive("ham_right", true);
+  document.querySelector("#ham > label > input").click();
   Order.classList.replace("hide-page", "show-page");
   Home.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
@@ -112,14 +123,18 @@ Hawaiian.addEventListener("click", (evt) => {
 
 MeatLover.addEventListener("click", (evt) => {
   console.log("meat lover");
-  controller.setActive("pepperoni_left", true);
-  controller.setActive("pepperoni_right", true);
-  controller.setActive("bacon_left", true);
-  controller.setActive("bacon_right", true);
-  controller.setActive("sausage_left", true);
-  controller.setActive("sausage_right", true);
-  controller.setActive("ham_left", true);
-  controller.setActive("ham_right", true);
+  // controller.setActive("pepperoni_left", true);
+  // controller.setActive("pepperoni_right", true);
+  document.querySelector("#pepperoni > label > input").click();
+  // controller.setActive("bacon_left", true);
+  // controller.setActive("bacon_right", true);
+  document.querySelector("#bacon > label > input").click();
+  // controller.setActive("sausage_left", true);
+  // controller.setActive("sausage_right", true);
+  document.querySelector("#sausage > label > input").click();
+  // controller.setActive("ham_left", true);
+  // controller.setActive("ham_right", true);
+  document.querySelector("#ham > label > input").click();
   Order.classList.replace("hide-page", "show-page");
   Home.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
@@ -127,12 +142,15 @@ MeatLover.addEventListener("click", (evt) => {
 
 TripleThreat.addEventListener("click", (evt) => {
   console.log("triple threat");
-  controller.setActive("pepperoni_left", true);
-  controller.setActive("pepperoni_right", true);
-  controller.setActive("bacon_left", true);
-  controller.setActive("bacon_right", true);
-  controller.setActive("sausage_left", true);
-  controller.setActive("sausage_right", true);
+  // controller.setActive("pepperoni_left", true);
+  // controller.setActive("pepperoni_right", true);
+  document.querySelector("#pepperoni > label > input").click();
+  // controller.setActive("bacon_left", true);
+  // controller.setActive("bacon_right", true);
+  document.querySelector("#bacon > label > input").click();
+  // controller.setActive("sausage_left", true);
+  // controller.setActive("sausage_right", true);
+  document.querySelector("#sausage > label > input").click();
   Order.classList.replace("hide-page", "show-page");
   Home.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
