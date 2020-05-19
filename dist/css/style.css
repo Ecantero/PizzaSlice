@@ -29,6 +29,7 @@
     top: -425px;
     left: 925px; */
     float: right;
+    position: relative;
 }
 
 #logo {
@@ -37,6 +38,15 @@
 
 #toppingsList {
     width: 100%;
+}
+
+#orderinfo {
+    width: 50%;
+}
+
+#pizzaContainer {
+    display: flex;
+    justify-content: space-around;
 }
 
 .slideshow > img {

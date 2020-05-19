@@ -18,8 +18,11 @@ export const HomeContent = `
 
 export const OrderContent = `
     <h1>Order</h1>
-    <div class="content-container">
-        <canvas id="pizzaCanvas"></canvas>
+    <div id="pizzaContainer" class="content-container">
+        <div id="orderinfo">
+            <canvas id="pizzaCanvas"></canvas>
+            <h3 id="priceDisplay"></h3>
+        </div>
         <div id="selection">
             <h3>Toppings</h3>
             <ul id="toppingsList">
@@ -105,6 +108,25 @@ export const OrderContent = `
                     </div>
                 </li>
             </ul>
+            <h3>Sizes</h3>
+            <div id="sizes">
+                <label class="checkContainer" id="Small">
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="checkmark">Small</span>
+                </label>
+                <label class="checkContainer" id="Medium">
+                    <input type="radio" name="radio">
+                    <span class="checkmark">Medium</span>
+                </label>
+                <label class="checkContainer" id="Large">
+                    <input type="radio" name="radio">
+                    <span class="checkmark">Large</span>
+                </label>
+                <label class="checkContainer" id="X-large">
+                    <input type="radio" name="radio">
+                    <span class="checkmark">X-Large</span>
+                </label>
+            </div>
         </div>
     </div>    
 `;
