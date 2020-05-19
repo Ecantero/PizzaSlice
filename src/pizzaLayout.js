@@ -18,8 +18,12 @@ export const HomeContent = `
 
 export const OrderContent = `
     <h1>Order</h1>
-    <div class="content-container">
-        <canvas id="pizzaCanvas"></canvas>
+    <div id="pizzaContainer" class="content-container">
+        <div id="orderinfo">
+            <canvas id="pizzaCanvas"></canvas>
+            <h3 id="priceDisplay"></h3>
+            <h3 id="specialPrice" class="specialPriceHidden">Special 5+ Topping Price!!</h3>
+        </div>
         <div id="selection">
             <h3>Toppings</h3>
             <ul id="toppingsList">
@@ -68,7 +72,7 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="mushrooms">
+                <li id="mushroom">
                     <label class="checkContainer">
                         <input type="checkbox">
                         <span class="checkmark">Mushrooms</span>
@@ -114,6 +118,25 @@ export const OrderContent = `
                     </div>
                 </li>
             </ul>
+            <h3>Sizes</h3>
+            <div id="sizes">
+                <label class="checkContainer" id="Small">
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="checkmark">Small</span>
+                </label>
+                <label class="checkContainer" id="Medium">
+                    <input type="radio" name="radio">
+                    <span class="checkmark">Medium</span>
+                </label>
+                <label class="checkContainer" id="Large">
+                    <input type="radio" name="radio">
+                    <span class="checkmark">Large</span>
+                </label>
+                <label class="checkContainer" id="X-large">
+                    <input type="radio" name="radio">
+                    <span class="checkmark">X-Large</span>
+                </label>
+            </div>
         </div>
     </div>    s
 `;
@@ -136,4 +159,34 @@ export const AboutContent = `
         It’s our goal to make sure you always have the best ingredients for every occasion.</p>
         
     </section>
+`;
+
+export const FiveSpecial = `
+    <h1>Check out our top five choices</h1>
+    <div id="TripleThreat">
+        <img src="TripleThreat.png"/>
+        <h2>Triple Threat Pizza</h2>
+        <p></p>
+    </div>
+    <div id="Hawaiian">
+        <img src="Hawaiian.png"/>
+        <h2>Hawaiian Pizza</h2>
+        <p></p>
+    </div>
+    <div id="Veggies">
+        <img src="Veggies.png"/>
+        <h2>Veggie Pizza</h2>
+        <p></p>
+    </div>
+    <div id="Supreme">
+        <img src="Supreme.png"/>
+        <h2>Supreme Pizza</h2>
+        <p></p>
+    </div>
+    <div id="MeatLover">
+        <img src="MeatLover.png"/>
+        <h2>Meat Lover's Pizza</h2>
+        <p></p>
+    </div>
+
 `;
