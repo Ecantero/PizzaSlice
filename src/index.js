@@ -1,4 +1,4 @@
-import { HomeContent, OrderContent, AboutContent } from "./pizzaLayout";
+import { HomeContent, OrderContent, AboutContent, FiveSpecial } from "./pizzaLayout";
 import { data } from "./data";
 import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
@@ -27,6 +27,17 @@ const HomePage = Layout.InsertElement("div", "Page show-page full-container", "H
 const OrderPage = Layout.InsertElement("div", "Page hide-page full-container", "OrderPage", null, OrderContent, content);
 const AboutPage = Layout.InsertElement("div", "Page hide-page full-container", "AboutPage", null, AboutContent, content);
 
+const Home = document.getElementById("HomePage");
+const Order = document.getElementById("OrderPage");
+const About = document.getElementById("AboutPage");
+const FiveDiv = Layout.InsertElement("div", "", "Five", null, FiveSpecial, Home);
+
+const Supreme = document.getElementById("Supreme");
+const Veggies = document.getElementById("Veggies");
+const Hawaiian = document.getElementById("Hawaiian");
+const MeatLover = document.getElementById("MeatLover");
+const TripleThreat = document.getElementById("TripleThreat");
+
 const HomeBtn = document.getElementById("Home");
 const OrderBtn = document.getElementById("Order");
 const AboutBtn = document.getElementById("AboutUs");
@@ -35,22 +46,94 @@ const toppings = document.querySelectorAll("#toppingsList > li");
 
 HomeBtn.addEventListener("click", (evt) => {
   //Use element.classList to change classes
-  document.getElementById("HomePage").classList.replace("hide-page", "show-page");
-  document.getElementById("OrderPage").classList.replace("show-page", "hide-page");
-  document.getElementById("AboutPage").classList.replace("show-page", "hide-page");
+  Home.classList.replace("hide-page", "show-page");
+  Order.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
 });
 
 OrderBtn.addEventListener("click", (evt) => {
-  document.getElementById("OrderPage").classList.replace("hide-page", "show-page");
-  document.getElementById("HomePage").classList.replace("show-page", "hide-page");
-  document.getElementById("AboutPage").classList.replace("show-page", "hide-page");
+  Order.classList.replace("hide-page", "show-page");
+  Home.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
 });
 
 AboutBtn.addEventListener("click", (evt) => {
-  document.getElementById("AboutPage").classList.replace("hide-page", "show-page");
-  document.getElementById("OrderPage").classList.replace("show-page", "hide-page");
-  document.getElementById("HomePage").classList.replace("show-page", "hide-page");
+  About.classList.replace("hide-page", "show-page");
+  Order.classList.replace("show-page", "hide-page");
+  Home.classList.replace("show-page", "hide-page");
 });
+
+Supreme.addEventListener("click", (evt) => {
+  console.log("supreme");
+  controller.setActive("mushroom_left", true);
+  controller.setActive("mushroom_right", true);
+  controller.setActive("bananaPepper_left", true);
+  controller.setActive("bananaPepper_right", true);
+  controller.setActive("hot_cheeto_left", true);
+  controller.setActive("hot_cheeto_right", true);
+  controller.setActive("pepperoni_left", true);
+  controller.setActive("pepperoni_right", true);
+  controller.setActive("ham_left", true);
+  controller.setActive("ham_right", true);
+  Order.classList.replace("hide-page", "show-page");
+  Home.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
+});
+
+Veggies.addEventListener("click", (evt) => {
+  console.log("veggies");
+  controller.setActive("mushroom_left", true);
+  controller.setActive("mushroom_right", true);
+  controller.setActive("bananaPepper_left", true);
+  controller.setActive("bananaPepper_right", true);
+  controller.setActive("pineapple_left", true);
+  controller.setActive("pineapple_right", true);
+  controller.setActive("spinache_left", true);
+  controller.setActive("spinache_right", true);
+  Order.classList.replace("hide-page", "show-page");
+  Home.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
+});
+
+Hawaiian.addEventListener("click", (evt) => {
+  console.log("hawaiian");
+  controller.setActive("pineapple_left", true);
+  controller.setActive("pineapple_right", true);
+  controller.setActive("ham_left", true);
+  controller.setActive("ham_right", true);
+  Order.classList.replace("hide-page", "show-page");
+  Home.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
+});
+
+MeatLover.addEventListener("click", (evt) => {
+  console.log("meat lover");
+  controller.setActive("pepperoni_left", true);
+  controller.setActive("pepperoni_right", true);
+  controller.setActive("bacon_left", true);
+  controller.setActive("bacon_right", true);
+  controller.setActive("sausage_left", true);
+  controller.setActive("sausage_right", true);
+  controller.setActive("ham_left", true);
+  controller.setActive("ham_right", true);
+  Order.classList.replace("hide-page", "show-page");
+  Home.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
+});
+
+TripleThreat.addEventListener("click", (evt) => {
+  console.log("triple threat");
+  controller.setActive("pepperoni_left", true);
+  controller.setActive("pepperoni_right", true);
+  controller.setActive("bacon_left", true);
+  controller.setActive("bacon_right", true);
+  controller.setActive("sausage_left", true);
+  controller.setActive("sausage_right", true);
+  Order.classList.replace("hide-page", "show-page");
+  Home.classList.replace("show-page", "hide-page");
+  About.classList.replace("show-page", "hide-page");
+});
+
 
 for (let index = 0; index < toppings.length; index++) {
   const element = document.querySelector("#" + toppings.item(index).id + " > label > input");

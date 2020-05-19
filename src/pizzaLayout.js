@@ -95,15 +95,6 @@ export const OrderContent = `
 
                     </div>
                 </li>
-                <li id="bacon">
-                    <label class="checkContainer">
-                        <input type="checkbox">
-                        <span class="checkmark">Bacon</span>
-                    </label>
-                    <div class="eventClearFix">
-
-                    </div>
-                </li>
                 <li id="sausage">
                     <label class="checkContainer">
                         <input type="checkbox">
@@ -123,4 +114,34 @@ export const AboutContent = `
         <h1>About Us</h1>
         <p>Shadow the Hedgehog's a bitch-ass motherfucker, who pissed on my fucking wife. That's right, he took his hedgehog fuckin' quilly dick out and he pissed on my fucking wife, and he said his dick was "THIS BIG", and I said that's disgusting, so I'm making a callout post on my Twitter-dot-com, Shadow the Hedgehog, you got a small dick, it's the size of this walnut except WAY smaller. And guess what? Here's what my dong looks like! THAT'S RIGHT, BABY. TALL POINTS, NO QUILLS, NO PILLOWS, LOOK AT THAT, IT LOOKS LIKE TWO BALLS AND A BONG. He fucked my wife, so guess what? I'M GONNA FUCK THE EARTH! That's right, this is what you get! MY SUPER LASER PISS! Except I'm not gonna piss on the earth. I'm gonna go higher. I'M PISSING ON THE MOON! How do you like that, OBAMA? I PISSED ON THE MOON, YOU IDIOT! You have TWENTY THREE HOURS before the piss DRRRRRROPLETS hit the fucking earth, now get out of my fucking sight before I piss on you too!</p>
     </section>
+`;
+
+export const FiveSpecial = `
+    <h1>Check out our top five choices</h1>
+    <div id="TripleThreat">
+        <img src="TripleThreat.png"/>
+        <h2>Triple Threat Pizza</h2>
+        <p></p>
+    </div>
+    <div id="Hawaiian">
+        <img src="Hawaiian.png"/>
+        <h2>Hawaiian Pizza</h2>
+        <p></p>
+    </div>
+    <div id="Veggies">
+        <img src="Veggies.png"/>
+        <h2>Veggie Pizza</h2>
+        <p></p>
+    </div>
+    <div id="Supreme">
+        <img src="Supreme.png"/>
+        <h2>Supreme Pizza</h2>
+        <p></p>
+    </div>
+    <div id="MeatLover">
+        <img src="MeatLover.png"/>
+        <h2>Meat Lover's Pizza</h2>
+        <p></p>
+    </div>
+
 `;

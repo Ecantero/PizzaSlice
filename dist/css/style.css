@@ -3,6 +3,12 @@
     justify-content: space-around;
 } */
 
+#Five{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #pizzaCanvas{
     height: 400px;
     width: 500px;
