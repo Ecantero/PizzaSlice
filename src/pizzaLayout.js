@@ -150,7 +150,7 @@ export const AboutContent = `
         opened our doors more than 2 weeks ago. And we're driven to be the best at making innovative new products and recipes, maybe.</p>
         <br>
         <p>Quality is at our core. It’s the foundation we started with, from the first Bambinos Pizza Place that was made in a janitors closet in 
-        El Pase, Texas, to opening up more locations around the world.</p>
+        El Paso, Texas, to opening up more locations around the world.</p>
         <br>
         <p>We don’t use cheap and more processed ingredients. Whether it's our signature sauce, toppings, our original fresh dough
         , or even the box itself, we invest in our ingredients to ensure that we always give you the finest quality pizza.</p>
