@@ -137,7 +137,7 @@ export const OrderContent = `
                 </label>
             </div>
         </div>
-    </div>    s
+    </div>
 `;
 
 export const AboutContent = `
@@ -162,33 +162,38 @@ export const AboutContent = `
 
 export const FiveSpecial = `
     <h1>Check out our top five choices</h1>
-    <div id="AdScrollWrapper" class="content-container">
-        <div id="PizzaAds">
-            <div id="TripleThreat">
-                <h2>Triple Threat Pizza</h2>
-                <img src="Ads/TripleThreat.jpg"/>
-                <p></p>
-            </div>
-            <div id="Hawaiian">
-                <h2>Hawaiian Pizza</h2>
-                <img src="Ads/Hawaiian.jpg"/>
-                <p></p>
-            </div>
-            <div id="Veggies">
-                <h2>Veggie Pizza</h2>
-                <img src="Ads/VeggiePizza.jpg"/>
-                <p></p>
-            </div>
-            <div id="Supreme">
-                <h2>Supreme Pizza</h2>
-                <img src="Ads/SupremePizza.jpg"/>
-                <p></p>
-            </div>
-            <div id="MeatLover">
-                <h2>Meat Lover's Pizza</h2>
-                <img src="Ads/MeatLovers.jpg"/>
-                <p></p>
+    <div id="AdControlWrapper" class="content-container">
+        <div id="AdScrollWrapper">
+            <div id="PizzaAds">
+                <div id="TripleThreat">
+                    <h2>Triple Threat Pizza</h2>
+                    <img src="Ads/TripleThreat.jpg"/>
+                    <p></p>
+                </div>
+                <div id="Hawaiian">
+                    <h2>Hawaiian Pizza</h2>
+                    <img src="Ads/Hawaiian.jpg"/>
+                    <p></p>
+                </div>
+                <div id="Veggies">
+                    <h2>Veggie Pizza</h2>
+                    <img src="Ads/VeggiePizza.jpg"/>
+                    <p></p>
+                </div>
+                <div id="Supreme">
+                    <h2>Supreme Pizza</h2>
+                    <img src="Ads/SupremePizza.jpg"/>
+                    <p></p>
+                </div>
+                <div id="MeatLover">
+                    <h2>Meat Lover's Pizza</h2>
+                    <img src="Ads/MeatLovers.jpg"/>
+                    <p></p>
+                </div>
+                
             </div>
         </div>
+        <div id="AdLeftScroller" class="font-size-9-bold" data-target="pizzaShow"><</div>
+        <div id="AdRightScroller" class="font-size-9-bold" data-target="pizzaShow">></div>
     </div>
 `;
