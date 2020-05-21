@@ -49,6 +49,21 @@
     justify-content: space-around;
 }
 
+#AdScrollWrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+#PizzaAds {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+#PizzaAds > div > img {
+    width: 500px;
+}
+
 .specialPriceHidden {
     display: none;
 }
