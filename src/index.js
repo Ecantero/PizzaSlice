@@ -33,11 +33,14 @@ const Order = document.getElementById("OrderPage");
 const About = document.getElementById("AboutPage");
 const FiveDiv = Layout.InsertElement("div", "", "Five", null, FiveSpecial, Home);
 
+const AdPizzaBlock = document.getElementById("PizzaAds");
 const Supreme = document.getElementById("Supreme");
 const Veggies = document.getElementById("Veggies");
 const Hawaiian = document.getElementById("Hawaiian");
 const MeatLover = document.getElementById("MeatLover");
 const TripleThreat = document.getElementById("TripleThreat");
+const scrollLeft = document.getElementById("AdLeftScroller");
+const scrollRight = document.getElementById("AdRightScroller");
 
 const HomeBtn = document.getElementById("Home");
 const OrderBtn = document.getElementById("Order");
@@ -156,6 +159,23 @@ TripleThreat.addEventListener("click", (evt) => {
   About.classList.replace("show-page", "hide-page");
 });
 
+scrollLeft.addEventListener("click", (evt) => {
+  var scrollWidth = AdPizzaBlock.scrollWidth;
+  if (AdPizzaBlock.scrollLeft > 500) {
+    AdPizzaBlock.scrollBy(-500, 0);
+  } else if (AdPizzaBlock.scrollLeft < 500 && AdPizzaBlock.scrollLeft > 0) {
+    AdPizzaBlock.scrollBy(-AdPizzaBlock.scrollLeft, 0);
+  }
+});
+
+scrollRight.addEventListener("click", (evt) => {
+  var scrollWidth = AdPizzaBlock.scrollWidth;
+  if (AdPizzaBlock.scrollLeft < scrollWidth - 500) {
+    AdPizzaBlock.scrollBy(500, 0);
+  } else if (AdPizzaBlock.scrollLeft > scrollWidth - 500 && AdPizzaBlock.scrollLeft < scrollWidth) {
+    AdPizzaBlock.scrollBy(scrollWidth - AdPizzaBlock.scrollLeft, 0);
+  }
+});
 
 for (let index = 0; index < toppings.length; index++) {
   const element = document.querySelector("#" + toppings.item(index).id + " > label > input");

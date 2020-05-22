@@ -1,10 +1,6 @@
 export const HomeContent = `
     <section class="content-container">
         <h1>Bambinos Pizza Place</h1>
-        <h3 id="preSelected">Order from our five specials!</h3>
-        <h4 id="buildOwn">Or build Your Own!</h4>
-    </section>
-    <section class="content-container">
         <div class="slideshow" id="pizzaShow">
             <img class="img-show" src="Slideshow/pizza_1.jpg" alt="" srcset="">
             <img class="img-hide" src="Slideshow/pizza_2.png" alt="" srcset="">
@@ -13,8 +9,11 @@ export const HomeContent = `
             <div class="rightControl font-size-9-bold" data-target="pizzaShow">></div>
             <div class="img-indicator"></div>
         </div>
+
     </section>
 `;
+
+var slidshowbackup = `    `;
 
 export const OrderContent = `
     <h1>Order</h1>
@@ -138,7 +137,7 @@ export const OrderContent = `
                 </label>
             </div>
         </div>
-    </div>    s
+    </div>
 `;
 
 export const AboutContent = `
@@ -163,30 +162,38 @@ export const AboutContent = `
 
 export const FiveSpecial = `
     <h1>Check out our top five choices</h1>
-    <div id="TripleThreat">
-        <img src="TripleThreat.png"/>
-        <h2>Triple Threat Pizza</h2>
-        <p></p>
+    <div id="AdControlWrapper" class="content-container">
+        <div id="AdScrollWrapper">
+            <div id="PizzaAds">
+                <div id="TripleThreat">
+                    <h2>Triple Threat Pizza</h2>
+                    <img src="Ads/TripleThreat.jpg"/>
+                    <p></p>
+                </div>
+                <div id="Hawaiian">
+                    <h2>Hawaiian Pizza</h2>
+                    <img src="Ads/Hawaiian.jpg"/>
+                    <p></p>
+                </div>
+                <div id="Veggies">
+                    <h2>Veggie Pizza</h2>
+                    <img src="Ads/VeggiePizza.jpg"/>
+                    <p></p>
+                </div>
+                <div id="Supreme">
+                    <h2>Supreme Pizza</h2>
+                    <img src="Ads/SupremePizza.jpg"/>
+                    <p></p>
+                </div>
+                <div id="MeatLover">
+                    <h2>Meat Lover's Pizza</h2>
+                    <img src="Ads/MeatLovers.jpg"/>
+                    <p></p>
+                </div>
+                
+            </div>
+        </div>
+        <div id="AdLeftScroller" class="font-size-9-bold" data-target="pizzaShow"><</div>
+        <div id="AdRightScroller" class="font-size-9-bold" data-target="pizzaShow">></div>
     </div>
-    <div id="Hawaiian">
-        <img src="Hawaiian.png"/>
-        <h2>Hawaiian Pizza</h2>
-        <p></p>
-    </div>
-    <div id="Veggies">
-        <img src="Veggies.png"/>
-        <h2>Veggie Pizza</h2>
-        <p></p>
-    </div>
-    <div id="Supreme">
-        <img src="Supreme.png"/>
-        <h2>Supreme Pizza</h2>
-        <p></p>
-    </div>
-    <div id="MeatLover">
-        <img src="MeatLover.png"/>
-        <h2>Meat Lover's Pizza</h2>
-        <p></p>
-    </div>
-
 `;
