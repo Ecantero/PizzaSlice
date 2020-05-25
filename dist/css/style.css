@@ -49,6 +49,99 @@
     justify-content: space-around;
 }
 
+#AdControlWrapper {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+#AdScrollWrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+#PizzaAds {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-bottom: 500px;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+#AdLeftScroller {
+    position: absolute;
+    background-color: #FF5432;
+    border: 5px solid #FF5432;
+    left: -75px;
+    top: 200px;
+    user-select: none;
+    cursor: pointer;
+}
+
+#AdRightScroller {
+    position: absolute;
+    background-color: #FF5432;
+    border: 5px solid #FF5432;
+    right: -75px;
+    top: 200px;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #AdLeftScroller {
+        position: absolute;
+        background-color: #FF5432;
+        border: 5px solid #FF5432;
+        left: -50px;
+        top: 200px;
+        user-select: none;
+        cursor: pointer;
+    }
+    #AdRightScroller {
+        position: absolute;
+        background-color: #FF5432;
+        border: 5px solid #FF5432;
+        right: -50px;
+        top: 200px;
+        user-select: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 575px) {
+    #AdLeftScroller {
+        display: none;
+    }
+    #AdRightScroller {
+        display: none;
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#PizzaAds::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge and Firefox */
+#PizzaAds {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} 
+
+#PizzaAds > div > img {
+    width: 500px;
+    cursor: pointer;
+    transition: width 0.4s;
+}
+
+#PizzaAds > div > img:hover {
+    width: 600px;
+}
+
 .specialPriceHidden {
     display: none;
 }
@@ -168,6 +261,10 @@ nav {
 
 h1{
     text-align: center;
+}
+
+html, body {
+    height: 100%;
 }
 
 /* li{
