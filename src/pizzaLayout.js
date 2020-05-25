@@ -137,8 +137,11 @@ export const OrderContent = `
                     <span class="checkmark">X-Large</span>
                 </label>
             </div>
+            <div id="addToCart" class="button">
+                Add to Cart
+            </div>
         </div>
-    </div>    s
+    </div>
 `;
 
 export const AboutContent = `
@@ -189,4 +192,10 @@ export const FiveSpecial = `
         <p></p>
     </div>
 
+`;
+
+export const Cart = `
+    <h1>Cart</h1>
+    <div id ="Cart">
+    </div>
 `;

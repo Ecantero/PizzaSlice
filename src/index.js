@@ -45,6 +45,7 @@ const AboutBtn = document.getElementById("AboutUs");
 
 const toppings = document.querySelectorAll("#toppingsList > li");
 const sizes = document.querySelectorAll('#sizes > label');
+const addToCart = document.getElementById("addToCart");
 
 const priceDisplay = document.getElementById("priceDisplay");
 
@@ -65,6 +66,28 @@ AboutBtn.addEventListener("click", (evt) => {
   About.classList.replace("hide-page", "show-page");
   Order.classList.replace("show-page", "hide-page");
   Home.classList.replace("show-page", "hide-page");
+});
+
+let orderArry = [];
+addToCart.addEventListener("click", (evt) => {
+  let num = 0;
+  for (let index = 0; index < sizes.length; index++) {
+    const element = document.querySelector("#" + sizes.item(index).id + " > input");
+    if (element.style.background == "#007A33") {
+      console.log(sizes.item(index).id);
+      orderArry[num] = sizes.item(index).id;
+    }
+  }
+  for (let i = 0; i < toppings.length; i++) {
+    const element = document.querySelector("#" + toppings.item(i).id + " > input");
+    if (element.style.background == "#007A33") {
+      num++;
+      console.log(toppings.item(i).id);
+      orderArry[num] = toppings.item(i).id;
+    }
+  }
+  // const element = document.getElementById("sizes").querySelector("label");
+  // console.log(element);
 });
 
 Supreme.addEventListener("click", (evt) => {
