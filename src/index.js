@@ -7,6 +7,10 @@ var controller;
 var sizePrice = 10;
 var totalPrice = 10;
 var toppingsUsed = 0;
+var both = false;
+var right = true;
+var left = true;
+var extra = false;
 
 const content = document.getElementById("Pizza");
 
@@ -70,28 +74,12 @@ AboutBtn.addEventListener("click", (evt) => {
 
 let orderArry = [];
 addToCart.addEventListener("click", (evt) => {
-  let num = 0;
-  for (let index = 0; index < sizes.length; index++) {
-    const element = document.querySelector("#" + sizes.item(index).id + " > input");
-    if (element.style.background == "#007A33") {
-      console.log(sizes.item(index).id);
-      orderArry[num] = sizes.item(index).id;
-    }
-  }
-  for (let i = 0; i < toppings.length; i++) {
-    const element = document.querySelector("#" + toppings.item(i).id + " > input");
-    if (element.style.background == "#007A33") {
-      num++;
-      console.log(toppings.item(i).id);
-      orderArry[num] = toppings.item(i).id;
-    }
-  }
-  // const element = document.getElementById("sizes").querySelector("label");
-  // console.log(element);
+  console.log();
 });
 
 Supreme.addEventListener("click", (evt) => {
   console.log("supreme");
+   
   // controller.setActive("mushroom_left", true);
   // controller.setActive("mushroom_right", true);
   document.querySelector("#mushroom > label > input").click();
@@ -114,6 +102,7 @@ Supreme.addEventListener("click", (evt) => {
 
 Veggies.addEventListener("click", (evt) => {
   console.log("veggies");
+
   // controller.setActive("mushroom_left", true);
   // controller.setActive("mushroom_right", true);
   document.querySelector("#mushroom > label > input").click();
@@ -133,6 +122,7 @@ Veggies.addEventListener("click", (evt) => {
 
 Hawaiian.addEventListener("click", (evt) => {
   console.log("hawaiian");
+   
   // controller.setActive("pineapple_left", true);
   // controller.setActive("pineapple_right", true);
   document.querySelector("#pineapple > label > input").click();
@@ -146,6 +136,7 @@ Hawaiian.addEventListener("click", (evt) => {
 
 MeatLover.addEventListener("click", (evt) => {
   console.log("meat lover");
+   
   // controller.setActive("pepperoni_left", true);
   // controller.setActive("pepperoni_right", true);
   document.querySelector("#pepperoni > label > input").click();
@@ -165,6 +156,7 @@ MeatLover.addEventListener("click", (evt) => {
 
 TripleThreat.addEventListener("click", (evt) => {
   console.log("triple threat");
+   
   // controller.setActive("pepperoni_left", true);
   // controller.setActive("pepperoni_right", true);
   document.querySelector("#pepperoni > label > input").click();
@@ -184,6 +176,11 @@ for (let index = 0; index < toppings.length; index++) {
   const element = document.querySelector("#" + toppings.item(index).id + " > label > input");
   element.addEventListener("change", (evt) => {
     if(element.checked == true) {
+      both = true;
+      console.log(`${toppings.item(index).id}: ${both}`);
+      console.log(`${toppings.item(index).id}_right: ${right}`);
+      console.log(`${toppings.item(index).id}_left: ${left}`);
+      console.log(`${toppings.item(index).id}_extra: ${extra}`);
       toppingsUsed ++;
       if(toppingsUsed <= 1) {
         totalPrice = sizePrice;
@@ -223,17 +220,36 @@ for (let index = 0; index < toppings.length; index++) {
 
       var insertPoint = document.querySelector(`#${toppings.item(index).id} > div`)
       Layout.InsertElement("ul", "", `${toppings.item(index).id}_setting_list`, null, checkContent, insertPoint);
-      
-      document.querySelector(`#${toppings.item(index).id}_left > label > input`).addEventListener("change", (evt) => {
-        controller.setActive(`${toppings.item(index).id}_left`, evt.target.checked);
+
+      const element_left = document.querySelector(`#${toppings.item(index).id}_left > label > input`)
+      element_left.addEventListener("change", (evt) => {
+        controller.setActive(`${toppings.item(index).id}_left`, element_left.checked);
+        if (element_left.checked) {
+          left = true;
+          console.log(`${toppings.item(index).id} on the left: ${left}`);
+        } else {
+          left = false;
+          console.log(`${toppings.item(index).id} on the left: ${left}`);
+        }
       });
 
-      document.querySelector(`#${toppings.item(index).id}_right > label > input`).addEventListener("change", (evt) => {
-        controller.setActive(`${toppings.item(index).id}_right`, evt.target.checked);
+      const element_right = document.querySelector(`#${toppings.item(index).id}_right > label > input`)
+      element_right.addEventListener("change", (evt) => {
+        controller.setActive(`${toppings.item(index).id}_right`, element_right.checked);
+        if (element_right.checked) {
+          right = true;
+          console.log(`${toppings.item(index).id} on the right: ${right}`);
+        } else {
+          right = false
+          console.log(`${toppings.item(index).id} on the right: ${right}`);
+        }
       });
 
-      document.querySelector(`#${toppings.item(index).id}_extra > label > input`).addEventListener("change", (evt) => {
-        if(evt.target.checked == true) {
+      const element_extra = document.querySelector(`#${toppings.item(index).id}_extra > label > input`)
+      element_extra.addEventListener("change", (evt) => {
+        if(element_extra.checked == true) {
+          extra = true;
+          console.log(`extra ${toppings.item(index).id}: ${extra}`);
           toppingsUsed++;
           if(toppingsUsed <= 1) {
             totalPrice = sizePrice;
@@ -246,6 +262,8 @@ for (let index = 0; index < toppings.length; index++) {
             document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
           }
         } else {
+          extra = false;
+          console.log(`extra ${toppings.item(index).id}: ${extra}`);
           toppingsUsed--;
           if(toppingsUsed <= 1) {
             totalPrice = sizePrice;
@@ -258,6 +276,8 @@ for (let index = 0; index < toppings.length; index++) {
         priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
       });
     } else {
+      both = false;
+      console.log(`${toppings.item(index).id}: ${both}`);
       toppingsUsed--;
       if(document.querySelector(`#${toppings.item(index).id}_extra > label > input`).checked) {
         toppingsUsed--;
