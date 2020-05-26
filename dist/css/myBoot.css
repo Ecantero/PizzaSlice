@@ -15,7 +15,7 @@
 }
 
 .bg-dark, .button.modal-toggle, .button.nav-button-dark {
-  background-color: black;
+  /* /background-color: black; */
 }
 
 .bg-light, .button.nav-button-light {
@@ -35,8 +35,8 @@
 }
 
 .outline-dark, .button.modal-toggle, .button.nav-button-dark {
-  border: solid 5px black;
-  box-sizing: border-box;
+  /* border: solid 5px black;
+  box-sizing: border-box; */
 }
 
 .outline-light, .button.nav-button-light {
@@ -90,7 +90,7 @@
 }
 
 .text-white, .button.modal-toggle, .button.nav-button-dark {
-  color: white;
+  /* color: white; */
 }
 
 a {
@@ -1302,7 +1302,7 @@ table.invert-colors.table-red-orange tr:nth-child(even) {
 .modal {
   display: none;
   position: fixed;
-  background-color: #47BDFF;
+  background-color: #FF5432;
   color: black;
   left: 25%;
   top: 30%;
@@ -1312,6 +1312,7 @@ table.invert-colors.table-red-orange tr:nth-child(even) {
   -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.43);
   box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.43);
   padding-top: 1%;
+  z-index: 100;
 }
 .modal.modal-on {
   display: block;
@@ -1494,8 +1495,8 @@ nav {
   border-color: #e6e6e6;
 }
 .button.modal-toggle:hover {
-  background-color: #1a1a1a;
-  border-color: #1a1a1a;
+  /* background-color: #1a1a1a;
+  border-color: #1a1a1a; */
 }
 .button.word-only {
   background-color: transparent;

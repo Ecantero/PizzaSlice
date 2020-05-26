@@ -1,4 +1,4 @@
-import { HomeContent, OrderContent, AboutContent, FiveSpecial } from "./pizzaLayout";
+import { HomeContent, OrderContent, AboutContent, FiveSpecial, CartContent } from "./pizzaLayout";
 import { data } from "./data";
 import Layout from "./insertion";
 import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} from "./Pizza";
@@ -6,11 +6,8 @@ import {LocateCanvas, InitializeImages, Loop, PizzaState, PizzaStateController} 
 var controller;
 var sizePrice = 10;
 var totalPrice = 10;
+var taxPrice = 0;
 var toppingsUsed = 0;
-var both = false;
-var right = true;
-var left = true;
-var extra = false;
 
 const content = document.getElementById("Pizza");
 
@@ -23,18 +20,21 @@ const navBar = Layout.InsertElement("nav", "sticky-nav bg-red-orange", "topNav",
 const innerNav = Layout.InsertElement("div", "inner-nav match-container", "topInner", null, "", navBar);
 const logo = Layout.InsertElementWithSrc("img", "nav-logo bottom-left", "logo", null, "", innerNav, "logo.png");
 
-const Btn1 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "Home", null, "<span>HOME</span>", innerNav);
-const Btn2 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "Order", null, "<span>ORDER</span>", innerNav);
-const Btn3 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-1-bold margin-r-1", "AboutUs", null, "<span>ABOUT</span>", innerNav);
+const Btn1 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-0-bold margin-r-1", "Home", null, "<span>HOME</span>", innerNav);
+const Btn2 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-0-bold margin-r-1", "Order", null, "<span>ORDER</span>", innerNav);
+const Btn3 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-0-bold margin-r-1", "AboutUs", null, "<span>ABOUT</span>", innerNav);
+// const Btn4 = Layout.InsertElement("div", "button nav-button bg-red-orange font-size-0-bold margin-r-1", "Cart", null, "<span>CART</span>", innerNav);
 
 //use show-page and hide page to change visibility
 const HomePage = Layout.InsertElement("div", "Page show-page full-container", "HomePage", null, HomeContent, content);
 const OrderPage = Layout.InsertElement("div", "Page hide-page full-container", "OrderPage", null, OrderContent, content);
 const AboutPage = Layout.InsertElement("div", "Page hide-page full-container", "AboutPage", null, AboutContent, content);
+// const CartPage = Layout.InsertElement("div", "Page hide-page full-container", "CartPage", null, CartContent, content);
 
 const Home = document.getElementById("HomePage");
 const Order = document.getElementById("OrderPage");
 const About = document.getElementById("AboutPage");
+// const Cart = document.getElementById("CartPage");
 const FiveDiv = Layout.InsertElement("div", "", "Five", null, FiveSpecial, Home);
 
 const AdPizzaBlock = document.getElementById("PizzaAds");
@@ -49,6 +49,7 @@ const scrollRight = document.getElementById("AdRightScroller");
 const HomeBtn = document.getElementById("Home");
 const OrderBtn = document.getElementById("Order");
 const AboutBtn = document.getElementById("AboutUs");
+// const CartBtn = document.getElementById("Cart");
 
 const toppings = document.querySelectorAll("#toppingsList > li");
 const sizes = document.querySelectorAll('#sizes > label');
@@ -61,23 +62,88 @@ HomeBtn.addEventListener("click", (evt) => {
   Home.classList.replace("hide-page", "show-page");
   Order.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
+  // Cart.classList.replace("show-page", "hide-page");
 });
 
 OrderBtn.addEventListener("click", (evt) => {
   Order.classList.replace("hide-page", "show-page");
   Home.classList.replace("show-page", "hide-page");
   About.classList.replace("show-page", "hide-page");
+  // Cart.classList.replace("show-page", "hide-page");
 });
 
 AboutBtn.addEventListener("click", (evt) => {
   About.classList.replace("hide-page", "show-page");
   Order.classList.replace("show-page", "hide-page");
   Home.classList.replace("show-page", "hide-page");
+  // Cart.classList.replace("show-page", "hide-page");
 });
 
-let orderArry = [];
+// CartBtn.addEventListener("click", (evt) => {
+//   Cart.classList.replace("hide-page", "show-page");
+//   About.classList.replace("show-page", "hide-page");
+//   Order.classList.replace("show-page", "hide-page");
+//   Home.classList.replace("show-page", "hide-page");
+// });
+
+const closeModal = document.querySelector("#thankYou > .close-button");
+closeModal.addEventListener("click", (evt) => {
+  var modal = document.getElementById("thankYou");
+  modal.classList.remove("modal-on");
+});
+
+// let orderArry = [];
 addToCart.addEventListener("click", (evt) => {
-  console.log();
+  var modal = document.getElementById("thankYou");
+  modal.classList += " modal-on";
+//   var checkedTops = document.querySelectorAll(".TActual > input");
+//   var size = document.querySelector("input[name=size]:checked");
+//   var pizzaToAdd = 
+//   {
+//     toppings: [],
+//     size: size.id,
+//     price: taxPrice
+//   };
+//   for (let index = 0; index < checkedTops.length; index++) {
+//     var topToPush = {
+//       name: "",
+//       extra: false,
+//       left: true,
+//       right: true,
+//     }
+//     // const checkedTop = checkedTops.item(index);
+//     const checkedTop = checkedTops.item(index);
+//     if(checkedTop.checked === true) {
+//       topToPush.name = checkedTop.id.replace("Check", "");
+//       var specialChecks = document.querySelectorAll(`#${checkedTop.id.replace("Check", "")} > .eventClearFix > ul > li > .TSetting > input`);
+//       topToPush.left = specialChecks.item(0).checked;
+//       topToPush.right = specialChecks.item(1).checked;
+//       topToPush.extra = specialChecks.item(2).checked;
+//       pizzaToAdd.toppings.push(topToPush);
+//     }
+//   }
+//   orderArry.push(pizzaToAdd);
+//   document.querySelector("#orderSummary > h2").remove();
+//   var orderList = document.getElementById("orderList");
+//   orderList.innerHTML = "";
+//   var overallPrice = 0;
+//   for (let index = 0; index < orderArry.length; index++) {
+//     const order = orderArry[index];
+//     orderList.innerHTML += `
+//       <div class="orderListing">
+//     `;
+//     overallPrice += order.price;
+//     for (let index = 0; index < order.toppings.length; index++) {
+//       const topping = order.toppings[index];
+//       orderList.innerHTML += `
+//       <p>One pizza with:</p>
+//       <p>${topping.extra ? 'Extra' : ''} ${topping.right ? topping.left ? '' : 'Right' : ''}  ${topping.left ? topping.right ? '' : 'Left' : ''} ${topping.name}</p>
+//       <p>${order.price}</p>
+//       `;
+//     }
+//     orderList.innerHTML += "</div>";
+//   }
+//   orderList.innerHTML += `<div>$${overallPrice}</div>`
 });
 
 Supreme.addEventListener("click", (evt) => {
@@ -196,11 +262,6 @@ for (let index = 0; index < toppings.length; index++) {
   const element = document.querySelector("#" + toppings.item(index).id + " > label > input");
   element.addEventListener("change", (evt) => {
     if(element.checked == true) {
-      both = true;
-      console.log(`${toppings.item(index).id}: ${both}`);
-      console.log(`${toppings.item(index).id}_right: ${right}`);
-      console.log(`${toppings.item(index).id}_left: ${left}`);
-      console.log(`${toppings.item(index).id}_extra: ${extra}`);
       toppingsUsed ++;
       if(toppingsUsed <= 1) {
         totalPrice = sizePrice;
@@ -214,23 +275,24 @@ for (let index = 0; index < toppings.length; index++) {
       }
       
       priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+      taxPrice = (totalPrice + (totalPrice * 0.0775)).toFixed(2);
 
       var checkContent = `
       <li id="${toppings.item(index).id}_left">
-          <label class="checkContainer">
-              <input type="checkbox" checked="checked">
+          <label class="checkContainer TSetting">
+              <input id="${toppings.item(index).id}_leftCheck" type="checkbox" checked="checked">
               <span class="checkmark">Left</span>
           </label>
       </li>
       <li id="${toppings.item(index).id}_right">
-          <label class="checkContainer">
-              <input type="checkbox" checked="checked">
+          <label class="checkContainer TSetting">
+              <input id="${toppings.item(index).id}_rightCheck" type="checkbox" checked="checked">
               <span class="checkmark">Right</span>
           </label>
       </li>
       <li id="${toppings.item(index).id}_extra">
-          <label class="checkContainer">
-              <input type="checkbox">
+          <label class="checkContainer TSetting">
+              <input id="${toppings.item(index).id}_extraCheck" type="checkbox">
               <span class="checkmark">Extra</span>
           </label>
       </li>
@@ -244,32 +306,16 @@ for (let index = 0; index < toppings.length; index++) {
       const element_left = document.querySelector(`#${toppings.item(index).id}_left > label > input`)
       element_left.addEventListener("change", (evt) => {
         controller.setActive(`${toppings.item(index).id}_left`, element_left.checked);
-        if (element_left.checked) {
-          left = true;
-          console.log(`${toppings.item(index).id} on the left: ${left}`);
-        } else {
-          left = false;
-          console.log(`${toppings.item(index).id} on the left: ${left}`);
-        }
       });
 
       const element_right = document.querySelector(`#${toppings.item(index).id}_right > label > input`)
       element_right.addEventListener("change", (evt) => {
         controller.setActive(`${toppings.item(index).id}_right`, element_right.checked);
-        if (element_right.checked) {
-          right = true;
-          console.log(`${toppings.item(index).id} on the right: ${right}`);
-        } else {
-          right = false
-          console.log(`${toppings.item(index).id} on the right: ${right}`);
-        }
       });
 
       const element_extra = document.querySelector(`#${toppings.item(index).id}_extra > label > input`)
       element_extra.addEventListener("change", (evt) => {
         if(element_extra.checked == true) {
-          extra = true;
-          console.log(`extra ${toppings.item(index).id}: ${extra}`);
           toppingsUsed++;
           if(toppingsUsed <= 1) {
             totalPrice = sizePrice;
@@ -282,8 +328,6 @@ for (let index = 0; index < toppings.length; index++) {
             document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
           }
         } else {
-          extra = false;
-          console.log(`extra ${toppings.item(index).id}: ${extra}`);
           toppingsUsed--;
           if(toppingsUsed <= 1) {
             totalPrice = sizePrice;
@@ -294,10 +338,9 @@ for (let index = 0; index < toppings.length; index++) {
           }
         }
         priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+        taxPrice = (totalPrice + (totalPrice * 0.0775)).toFixed(2);
       });
     } else {
-      both = false;
-      console.log(`${toppings.item(index).id}: ${both}`);
       toppingsUsed--;
       if(document.querySelector(`#${toppings.item(index).id}_extra > label > input`).checked) {
         toppingsUsed--;
@@ -313,6 +356,7 @@ for (let index = 0; index < toppings.length; index++) {
         document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
       }
       priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+      taxPrice = (totalPrice + (totalPrice * 0.0775)).toFixed(2);
       var listNotNeeded = document.querySelector(`#${toppings.item(index).id} > div > ul`);
       controller.setActive(`${toppings.item(index).id}_left`, false);
       controller.setActive(`${toppings.item(index).id}_right`, false);
@@ -336,11 +380,13 @@ for (let index = 0; index < sizes.length; index++) {
         document.getElementById("specialPrice").classList.replace("specialPriceHidden", "specialPriceShow");
       }
       priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+      taxPrice = (totalPrice + (totalPrice * 0.0775)).toFixed(2);
   });
 }
 
 window.addEventListener("load", loaded => {
   priceDisplay.innerHTML = `Total Price: $${(totalPrice + (totalPrice * 0.0775)).toFixed(2)}`;
+  taxPrice = (totalPrice + (totalPrice * 0.0775)).toFixed(2);
   LocateCanvas();
   var toppingArr = [];
 

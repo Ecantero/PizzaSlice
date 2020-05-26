@@ -33,7 +33,7 @@
 }
 
 #logo {
-    width: 70px;
+    width: 40px;
 }
 
 #toppingsList {
@@ -121,6 +121,16 @@
     }
 }
 
+#addToCart {
+    border-radius: 20px;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+#addToCart:hover {
+    background-color: rgb(240, 178, 166);
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 #PizzaAds::-webkit-scrollbar {
     display: none;
@@ -181,7 +191,7 @@
 }
 
 .nav-button {
-    padding: 35px 0px;
+    padding: 10px 0px;
     /* min-height: 6rem;
     display: inline-block;
     background-color: #FF5432;

@@ -13,10 +13,36 @@ export const HomeContent = `
     </section>
 `;
 
-var slidshowbackup = `    `;
+export const CartContent = `
+    <section class="content-container">
+        <h1>Your Order</h1>
+        <div id="orderSummary">
+            <h2>There are no Pizzas in your Cart</h2>
+            <div class="flex-container">
+                <div id="orderList" class="flex-container">
+                
+                </div>
+            </div>
+        </div>
+    </section>
+`;
 
 export const OrderContent = `
     <h1>Order</h1>
+    <h1 id="addToCart" class="button modal-toggle font-size-6-bold bg-red-orange width-25p margin-x-auto border-round">
+        Add to Cart
+    </h1>
+
+    <div class="modal" id="thankYou">
+        <a class="close-button" href="#"></a>
+        <h3 class="modal-header">Your Order has been placed!</h3>
+        <div class="modal-content content-container">
+            <p>Your pizza is on it's way!</p>
+        </div>
+        <div class="modal-footer">
+            <p>&nbsp</p>
+        </div>
+    </div>
     <div id="pizzaContainer" class="content-container">
         <div id="orderinfo">
             <canvas id="pizzaCanvas"></canvas>
@@ -27,8 +53,8 @@ export const OrderContent = `
             <h3>Toppings</h3>
             <ul id="toppingsList">
                 <li id="bacon">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="baconCheck" type="checkbox">
                         <span class="checkmark">Bacon</span>
                     </label>
                     <div class="eventClearFix">
@@ -36,8 +62,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="pineapple">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="pineappleCheck" type="checkbox">
                         <span class="checkmark">Pineapples</span>
                     </label>
                     <div class="eventClearFix">
@@ -45,8 +71,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="bananaPepper">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="bananaPepperCheck" type="checkbox">
                         <span class="checkmark">Banana Peppers</span>
                     </label>
                     <div class="eventClearFix">
@@ -54,8 +80,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="ham">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="hamCheck" type="checkbox">
                         <span class="checkmark">Ham</span>
                     </label>
                     <div class="eventClearFix">
@@ -63,8 +89,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="hot_cheeto">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="hot_cheetoCheck" type="checkbox">
                         <span class="checkmark">Hot Cheetos</span>
                     </label>
                     <div class="eventClearFix">
@@ -72,8 +98,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="mushroom">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="mushroomCheck" type="checkbox">
                         <span class="checkmark">Mushrooms</span>
                     </label>
                     <div class="eventClearFix">
@@ -81,8 +107,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="spinache">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="spinacheCheck" type="checkbox">
                         <span class="checkmark">Spinach</span>
                     </label>
                     <div class="eventClearFix">
@@ -90,8 +116,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="pepperoni">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="pepperoniCheck" type="checkbox">
                         <span class="checkmark">Pepperoni</span>
                     </label>
                     <div class="eventClearFix">
@@ -99,8 +125,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="sausage">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="sausageCheck" type="checkbox">
                         <span class="checkmark">Sausage</span>
                     </label>
                     <div class="eventClearFix">
@@ -108,8 +134,8 @@ export const OrderContent = `
                     </div>
                 </li>
                 <li id="onion">
-                    <label class="checkContainer">
-                        <input type="checkbox">
+                    <label class="checkContainer TActual">
+                        <input id="onionCheck" type="checkbox">
                         <span class="checkmark">Onion</span>
                     </label>
                     <div class="eventClearFix">
@@ -120,24 +146,21 @@ export const OrderContent = `
             <h3>Sizes</h3>
             <div id="sizes">
                 <label class="checkContainer" id="Small">
-                    <input type="radio" name="radio" checked="checked">
+                    <input id="SmallCheck" type="radio" name="size" checked="checked">
                     <span class="checkmark">Small</span>
                 </label>
                 <label class="checkContainer" id="Medium">
-                    <input type="radio" name="radio">
+                    <input id="MediumCheck" type="radio" name="size">
                     <span class="checkmark">Medium</span>
                 </label>
                 <label class="checkContainer" id="Large">
-                    <input type="radio" name="radio">
+                    <input id="largeCheck" type="radio" name="size">
                     <span class="checkmark">Large</span>
                 </label>
                 <label class="checkContainer" id="X-large">
-                    <input type="radio" name="radio">
+                    <input id="X-LargeCheck" type="radio" name="size">
                     <span class="checkmark">X-Large</span>
                 </label>
-            </div>
-            <div id="addToCart" class="button">
-                Add to Cart
             </div>
         </div>
     </div>
@@ -200,10 +223,4 @@ export const FiveSpecial = `
         <div id="AdRightScroller" class="font-size-9-bold" data-target="pizzaShow">></div>
     </div>
 
-`;
-
-export const Cart = `
-    <h1>Cart</h1>
-    <div id ="Cart">
-    </div>
 `;
